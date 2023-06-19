@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe LynkUpService do 
-  describe "Gets one user", :vcr do 
+  describe "get_user", :vcr do 
     let(:user) {LynkUpService.new.get_user(1) }
 
     it "returns a user json object" do
@@ -22,10 +22,10 @@ RSpec.describe LynkUpService do
     end
   end
 
-  describe "Gets all users", :vcr do 
+  describe "get_all_users", :vcr do 
     let(:user) {LynkUpService.new.get_all_users }
 
-    it "returns a user json object" do
+    it "returns user json objects" do
       expect(user).to be_a(Hash)
       expect(user[:data]).to be_an(Array)
       expect(user[:data][0].keys).to eq([:id, :type, :attributes])
@@ -50,6 +50,24 @@ RSpec.describe LynkUpService do
       expect(user[:data][0][:attributes][:groups][0].keys).to eq([:id, :name])
       expect(user[:data][0][:attributes][:groups][0][:id]).to be_an(Integer)
       expect(user[:data][0][:attributes][:groups][0][:name]).to be_a(String)
+    end
+  end
+
+  describe "get_friends_for_user`", :vcr do 
+    let(:user) {LynkUpService.new.get_friends_for_user(1) }
+
+    it "returns a user json object" do
+      expect(user).to be_a(Hash)
+      expect(user[:data]).to be_a(Hash)
+      expect(user[:data].keys).to eq([:friends])
+      expect(user[:data][:friends]).to be_an(Array)
+      expect(user[:data][:friends].size).to eq(3)
+      expect(user[:data][:friends][0]).to be_a(Hash)
+      expect(user[:data][:friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(user[:data][:friends][0][:user_id]).to be_an(Integer)
+      expect(user[:data][:friends][0][:user_name]).to be_a(String)
+      expect(user[:data][:friends][0][:full_name]).to be_a(String)
+      expect(user[:data][:friends][0][:phone_number]).to be_a(String)
     end
   end
 end

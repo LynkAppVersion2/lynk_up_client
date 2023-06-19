@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 19 Jun 2023 02:48:39 GMT
+      - Mon, 19 Jun 2023 03:11:51 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -57,5 +57,5 @@ http_interactions:
         Lampke","events":[],"groups":[]}},{"id":7,"type":"user","attributes":{"user_name":"trevor123","phone_number":"555-222-3333","full_name":"Trevor
         Fitzgerald","events":[],"groups":[]}},{"id":8,"type":"user","attributes":{"user_name":"gus123","phone_number":"555-222-9999","full_name":"Gus
         Deribeaux","events":[],"groups":[]}}]}'
-  recorded_at: Mon, 19 Jun 2023 02:48:39 GMT
+  recorded_at: Mon, 19 Jun 2023 03:11:51 GMT
 recorded_with: VCR 6.1.0
