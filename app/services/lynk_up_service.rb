@@ -4,6 +4,11 @@ class LynkUpService
 		JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_all_users
+    response = connection.get("/users/")
+		JSON.parse(response.body, symbolize_names: true)
+  end
+
   private 
 
   def connection
