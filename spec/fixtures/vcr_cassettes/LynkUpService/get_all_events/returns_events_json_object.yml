@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/users/1/
+    uri: http://localhost:8000/events/
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 17 Jun 2023 02:45:03 GMT
+      - Sun, 25 Jun 2023 16:11:39 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - GET, OPTIONS
+      - POST, OPTIONS, GET
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '1006'
+      - '886'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -40,16 +40,15 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"user_name":"user123","phone_number":"555-555-5555","full_name":"Andra
-        Helton","events":[{"id":1,"group":1,"group_name":"Game Night","title":"Space
-        Catan","date":"5/20/23","time":"8:00 PM","address":"123 Sesame St.","description":"It''s
-        a fun time, just come already"},{"id":2,"group":1,"group_name":"Game Night","title":"Zombicide","date":"5/30/23","time":"8:00
+      string: '{"data":[{"id":1,"group":1,"group_name":"Game Night","title":"Space
+        Catan","date":"05-20-23","time":"8:00 PM","address":"123 Sesame St.","description":"It''s
+        a fun time, just come already"},{"id":2,"group":1,"group_name":"Game Night","title":"Zombicide","date":"05-30-23","time":"8:00
         PM","address":"123 Sesame St.","description":"Get over here, it''ll be spooky"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date":"6/3/23","time":"8:00 PM","address":"123 Sesame
+        Night","title":"Root","date":"06-03-23","time":"8:00 PM","address":"123 Sesame
         St.","description":"BYOB"},{"id":4,"group":2,"group_name":"Friday Night Hangs","title":"Going
-        to the Movies","date":"6/1/23","time":"8:00 PM","address":"321 Candy Ln.","description":"Going
+        to the Movies","date":"06-01-23","time":"8:00 PM","address":"321 Candy Ln.","description":"Going
         to see the Mario movie"},{"id":5,"group":2,"group_name":"Friday Night Hangs","title":"Renaissance
-        Festival Afterparty","date":"6/7/23","time":"6:00 PM","address":"321 Candy
-        Ln.","description":"Come to my place!"}]}}}'
-  recorded_at: Sat, 17 Jun 2023 02:45:03 GMT
+        Festival Afterparty","date":"06-07-23","time":"6:00 PM","address":"321 Candy
+        Ln.","description":"Come to my place!"}]}'
+  recorded_at: Sun, 25 Jun 2023 16:11:39 GMT
 recorded_with: VCR 6.1.0
