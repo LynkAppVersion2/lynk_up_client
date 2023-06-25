@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/groups/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Jun 2023 16:11:39 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - OPTIONS, GET
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '1797'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":1,"type":"group","attributes":{"host":1,"name":"Game
+        Night","friends":[{"user_id":3,"user_name":"joe123","full_name":"Joe Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
+        Ryan","phone_number":"555-999-0000"}],"events":[{"id":1,"group":1,"group_name":"Game
+        Night","title":"Space Catan","date":"05-20-23","time":"8:00 PM"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date":"05-30-23","time":"8:00 PM"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date":"06-03-23","time":"8:00 PM"}]}},{"id":2,"type":"group","attributes":{"host":1,"name":"Friday
+        Night Hangs","friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"events":[{"id":4,"group":2,"group_name":"Friday
+        Night Hangs","title":"Going to the Movies","date":"06-01-23","time":"8:00
+        PM"},{"id":5,"group":2,"group_name":"Friday Night Hangs","title":"Renaissance
+        Festival Afterparty","date":"06-07-23","time":"6:00 PM"}]}},{"id":3,"type":"group","attributes":{"host":2,"name":"Brunch","friends":[{"user_id":4,"user_name":"harrison321","full_name":"Harrison
+        Ryan","phone_number":"555-999-0000"},{"user_id":6,"user_name":"william321","full_name":"William
+        Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"}],"events":[]}},{"id":4,"type":"group","attributes":{"host":2,"name":"Roller
+        Bladez","friends":[{"user_id":6,"user_name":"william321","full_name":"William
+        Lampke","phone_number":"555-222-1111"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"events":[]}}]}'
+  recorded_at: Sun, 25 Jun 2023 16:11:39 GMT
+recorded_with: VCR 6.1.0
