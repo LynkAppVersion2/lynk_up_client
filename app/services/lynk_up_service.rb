@@ -14,6 +14,26 @@ class LynkUpService
 		JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_all_groups
+    response = connection.get("/groups/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_group(id)
+    response = connection.get("/groups/#{id}/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_all_events
+    response = connection.get("/events/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_event(id)
+    response = connection.get("/events/#{id}/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private 
 
   def connection
