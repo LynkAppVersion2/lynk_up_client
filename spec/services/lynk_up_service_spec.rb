@@ -165,22 +165,22 @@ RSpec.describe LynkUpService do
     end
   end
 
-  # describe "get_all_events", :vcr do 
-  #   let(:events) { LynkUpService.new.get_all_events }
+  describe "get_all_events", :vcr do 
+    let(:events) { LynkUpService.new.get_all_events }
 
-  #   it "returns events json object" do
-  #     expect(events).to be_a(Hash)
-  #     expect(events[:data]).to be_an(Array)
-  #     expect(events[:data][0][:id]).to be_an(Integer)
-  #     expect(events[:data][0][:group]).to be_an(Integer)
-  #     expect(events[:data][0][:group_name]).to be_a(String)
-  #     expect(events[:data][0][:title]).to be_a(String)
-  #     expect(events[:data][0][:date]).to be_a(String)
-  #     expect(events[:data][0][:time]).to be_a(String)
-  #     expect(events[:data][0][:address]).to be_a(String)
-  #     expect(events[:data][0][:description]).to be_a(String)
-  #   end
-  # end
+    it "returns events json object" do
+      expect(events).to be_a(Hash)
+      expect(events[:data]).to be_an(Array)
+      expect(events[:data][0][:id]).to be_an(Integer)
+      expect(events[:data][0][:group]).to be_an(Integer)
+      expect(events[:data][0][:group_name]).to be_a(String)
+      expect(events[:data][0][:title]).to be_a(String)
+      expect(events[:data][0][:date]).to be_a(String)
+      expect(events[:data][0][:time]).to be_a(String)
+      expect(events[:data][0][:address]).to be_a(String)
+      expect(events[:data][0][:description]).to be_a(String)
+    end
+  end
 
   # describe "get_event", :vcr do
   #   let (:event) { LynkUpService.new.get_event(1) }
