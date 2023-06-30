@@ -172,7 +172,13 @@ RSpec.describe LynkUpService do
     end
   end
 
-  # describe "delete_friend_for_user", :vcr do
+  describe "delete_friend_for_user", :vcr do
+    let(:response) { LynkUpService.new.delete_friend_for_user(1, 5) }
+
+    it "deletes a friend for a user" do
+      expect(response.status).to eq(204)
+    end
+  end
 
   describe "get_all_groups", :vcr do 
     let(:groups) { LynkUpService.new.get_all_groups }
