@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8000/users/1/friends/
+    body:
+      encoding: UTF-8
+      string: friend=5
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 30 Jun 2023 19:35:35 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - GET, OPTIONS, POST
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '604'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"data":{"friends":[{"user_id":2,"user_name":"otheruser321","full_name":"Antonio
+        King Hunt","phone_number":"555-111-5555"},{"user_id":3,"user_name":"joe123","full_name":"Joe
+        Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
+        Ryan","phone_number":"555-999-0000"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":5,"user_name":"dawson123","full_name":"Dawson
+        Timmons","phone_number":"555-000-3333"}]}}'
+  recorded_at: Fri, 30 Jun 2023 19:35:35 GMT
+recorded_with: VCR 6.1.0
