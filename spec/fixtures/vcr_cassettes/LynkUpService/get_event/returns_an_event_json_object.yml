@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 25 Jun 2023 16:11:39 GMT
+      - Fri, 30 Jun 2023 18:44:16 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - OPTIONS, DELETE, PUT, GET
+      - PATCH, GET, OPTIONS, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '188'
+      - '621'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -40,8 +40,12 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":1,"group":1,"group_name":"Game Night","title":"Space
-        Catan","date":"05-20-23","time":"8:00 PM","address":"123 Sesame St.","description":"It''s
-        a fun time, just come already"}}'
-  recorded_at: Sun, 25 Jun 2023 16:11:39 GMT
+      string: '{"data":{"id":1,"group":1,"group_name":"Game Night","host_id":1,"host_name":"Andra
+        Helton","title":"Space Catan","date":"05-20-23","time":"8:00 PM","address":"123
+        Sesame St.","description":"It''s a fun time, just come already","invited":[{"user_id":3,"user_name":"joe123","full_name":"Joe
+        Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
+        Ryan","phone_number":"555-999-0000"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}]}}'
+  recorded_at: Fri, 30 Jun 2023 18:44:16 GMT
 recorded_with: VCR 6.1.0
