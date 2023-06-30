@@ -82,6 +82,39 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "update_user", :vcr do
+    let(:user) { LynkUpService.new.update_user(1) }
+
+    it "returns updated user json object" do
+      expect(user).to be_a(Hash)
+      expect(user.keys).to eq([:id, :type, :attributes])
+      expect(user[:id]).to be_an(Integer)
+      expect(user[:type]).to be_a(String)
+      expect(user[:attributes]).to be_a(Hash)
+      expect(user[:attributes].keys).to eq([:user_name, :phone_number, :full_name, :my_events, :invited_to_events, :my_groups, :included_in_groups])
+      expect(user[:attributes][:user_name]).to be_a(String)
+      expect(user[:attributes][:phone_number]).to be_a(String)
+      expect(user[:attributes][:full_name]).to be_a(String)
+      expect(user[:attributes][:my_events]).to be_an(Array)
+      expect(user[:attributes][:my_events][0]).to be_a(Hash)
+      expect(user[:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(user[:attributes][:my_events][0][:id]).to be_an(Integer)
+      expect(user[:attributes][:my_events][0][:group]).to be_an(Integer)
+      expect(user[:attributes][:my_events][0][:group_name]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:title]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:date]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:time]).to be_a(String)
+      expect(user[:attributes][:invited_to_events]).to be_an(Array)
+      expect(user[:attributes][:my_groups]).to be_an(Array)
+      expect(user[:attributes][:my_groups][0]).to be_a(Hash)
+      expect(user[:attributes][:my_groups][0].keys).to eq([:id, :name, :member_count])
+      expect(user[:attributes][:my_groups][0][:id]).to be_an(Integer)
+      expect(user[:attributes][:my_groups][0][:name]).to be_a(String)
+      expect(user[:attributes][:my_groups][0][:member_count]).to be_an(Integer)
+      expect(user[:attributes][:included_in_groups]).to be_an(Array)
+    end
+  end
+
   describe "get_friends_for_user`", :vcr do 
     let(:user_friends) { LynkUpService.new.get_friends_for_user(1) }
 
