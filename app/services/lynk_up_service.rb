@@ -27,7 +27,7 @@ class LynkUpService
   def add_friend_for_user(id, params)
     response = connection.post("/users/#{id}/friends/") do |con|
       con.headers = { "CONTENT_TYPE" => "application/json" }
-			con.body = { friend: params }
+			con.body = params
     end
     JSON.parse(response.body, symbolize_names: true)
   end
@@ -43,6 +43,14 @@ class LynkUpService
 
   def get_group(id)
     response = connection.get("/groups/#{id}/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def create_group(params)
+    response = connection.post("/groups/") do |con|
+      con.headers = { "CONTENT_TYPE" => "application/json" }
+			con.body = params
+    end
     JSON.parse(response.body, symbolize_names: true)
   end
 
