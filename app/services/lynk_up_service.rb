@@ -3,9 +3,14 @@ class LynkUpService
     response = connection.get("/users/#{id}/")
 		JSON.parse(response.body, symbolize_names: true)
   end
-
+  
   def get_all_users
     response = connection.get("/users/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def update_user(id)
+    response = connection.patch("/users/#{id}/")
 		JSON.parse(response.body, symbolize_names: true)
   end
 
