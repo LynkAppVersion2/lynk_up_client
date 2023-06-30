@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/users/1/friends/6/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 Jun 2023 19:13:48 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - GET, OPTIONS, DELETE
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '298'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":6,"type":"user","attributes":{"user_name":"william321","phone_number":"555-222-1111","full_name":"William
+        Lampke","my_events":[],"invited_to_events":[],"my_groups":[],"included_in_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladers","member_count":2}]}}}'
+  recorded_at: Fri, 30 Jun 2023 19:13:48 GMT
+recorded_with: VCR 6.1.0

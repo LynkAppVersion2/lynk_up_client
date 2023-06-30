@@ -133,6 +133,27 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "get_friend_for_user", :vcr do
+    let(:user_friend) { LynkUpService.new.get_friend_for_user(1, 6) }
+
+    it "returns a user friend json object" do
+      expect(user_friend).to be_a(Hash)
+      expect(user_friend[:data]).to be_a(Hash)
+      expect(user_friend[:data].keys).to eq([:id, :type, :attributes])
+      expect(user_friend[:data][:id]).to be_an(Integer)
+      expect(user_friend[:data][:type]).to be_a(String)
+      expect(user_friend[:data][:attributes]).to be_a(Hash)
+      expect(user_friend[:data][:attributes].keys).to eq([:user_name, :phone_number, :full_name, :my_events, :invited_to_events, :my_groups, :included_in_groups])
+      expect(user_friend[:data][:attributes][:user_name]).to be_a(String)
+      expect(user_friend[:data][:attributes][:phone_number]).to be_a(String)
+      expect(user_friend[:data][:attributes][:full_name]).to be_a(String)
+      expect(user_friend[:data][:attributes][:my_events]).to be_an(Array)
+      expect(user_friend[:data][:attributes][:invited_to_events]).to be_an(Array)
+      expect(user_friend[:data][:attributes][:my_groups]).to be_an(Array)
+      expect(user_friend[:data][:attributes][:included_in_groups]).to be_an(Array)
+    end
+  end
+
   describe "get_all_groups", :vcr do 
     let(:groups) { LynkUpService.new.get_all_groups }
 
