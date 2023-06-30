@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8000/groups/
+    body:
+      encoding: UTF-8
+      string: name=New+Group&user=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 30 Jun 2023 20:40:24 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - GET, OPTIONS, POST
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '152'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"id":16,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[],"group_events":[]}}'
+  recorded_at: Fri, 30 Jun 2023 20:40:24 GMT
+recorded_with: VCR 6.1.0
