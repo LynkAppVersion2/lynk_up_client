@@ -132,35 +132,38 @@ RSpec.describe LynkUpService do
     end
   end
 
-  # describe "get_group", :vcr do 
-  #   let(:group) { LynkUpService.new.get_group(1) }
+  describe "get_group", :vcr do 
+    let(:group) { LynkUpService.new.get_group(1) }
 
-  #   it "returns a group json object" do
-  #     expect(group).to be_a(Hash)
-  #     expect(group[:id]).to be_an(Integer)
-  #     expect(group[:type]).to eq('group')
-  #     expect(group[:attributes]).to be_a(Hash)
-  #     expect(group[:attributes].keys).to eq([:host, :name, :friends, :events])
-  #     expect(group[:attributes][:host]).to be_an(Integer)
-  #     expect(group[:attributes][:name]).to be_a(String)
-  #     expect(group[:attributes][:friends]).to be_an(Array)
-  #     expect(group[:attributes][:friends][0]).to be_a(Hash)
-  #     expect(group[:attributes][:friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
-  #     expect(group[:attributes][:friends][0][:user_id]).to be_an(Integer)
-  #     expect(group[:attributes][:friends][0][:user_name]).to be_a(String)
-  #     expect(group[:attributes][:friends][0][:full_name]).to be_a(String)
-  #     expect(group[:attributes][:friends][0][:phone_number]).to be_a(String)
-  #     expect(group[:attributes][:events]).to be_an(Array)
-  #     expect(group[:attributes][:events][0]).to be_a(Hash)
-  #     expect(group[:attributes][:events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
-  #     expect(group[:attributes][:events][0][:id]).to be_an(Integer)
-  #     expect(group[:attributes][:events][0][:group]).to be_an(Integer)
-  #     expect(group[:attributes][:events][0][:group_name]).to be_a(String)
-  #     expect(group[:attributes][:events][0][:title]).to be_a(String)
-  #     expect(group[:attributes][:events][0][:date]).to be_a(String)
-  #     expect(group[:attributes][:events][0][:time]).to be_a(String)
-  #   end
-  # end
+    it "returns a group json object" do
+      expect(group).to be_a(Hash)
+      expect(group[:data]).to be_a(Hash)
+      expect(group[:data].keys).to eq([:id, :type, :attributes])
+      expect(group[:data][:id]).to be_an(Integer)
+      expect(group[:data][:type]).to eq('group')
+      expect(group[:data][:attributes]).to be_a(Hash)
+      expect(group[:data][:attributes].keys).to eq([:group_host_id, :group_host_name, :group_name, :group_friends, :group_events])
+      expect(group[:data][:attributes][:group_host_id]).to be_an(Integer)
+      expect(group[:data][:attributes][:group_host_name]).to be_a(String)
+      expect(group[:data][:attributes][:group_name]).to be_a(String)
+      expect(group[:data][:attributes][:group_friends]).to be_an(Array)
+      expect(group[:data][:attributes][:group_friends][0]).to be_a(Hash)
+      expect(group[:data][:attributes][:group_friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(group[:data][:attributes][:group_friends][0][:user_id]).to be_an(Integer)
+      expect(group[:data][:attributes][:group_friends][0][:user_name]).to be_a(String)
+      expect(group[:data][:attributes][:group_friends][0][:full_name]).to be_a(String)
+      expect(group[:data][:attributes][:group_friends][0][:phone_number]).to be_a(String)
+      expect(group[:data][:attributes][:group_events]).to be_an(Array)
+      expect(group[:data][:attributes][:group_events][0]).to be_a(Hash)
+      expect(group[:data][:attributes][:group_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(group[:data][:attributes][:group_events][0][:id]).to be_an(Integer)
+      expect(group[:data][:attributes][:group_events][0][:group]).to be_an(Integer)
+      expect(group[:data][:attributes][:group_events][0][:group_name]).to be_a(String)
+      expect(group[:data][:attributes][:group_events][0][:title]).to be_a(String)
+      expect(group[:data][:attributes][:group_events][0][:date]).to be_a(String)
+      expect(group[:data][:attributes][:group_events][0][:time]).to be_a(String)
+    end
+  end
 
   # describe "get_all_events", :vcr do 
   #   let(:events) { LynkUpService.new.get_all_events }
