@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 25 Jun 2023 16:11:39 GMT
+      - Fri, 30 Jun 2023 18:32:26 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - POST, OPTIONS, DELETE, GET
+      - GET, OPTIONS, POST
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '314'
+      - '507'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -43,6 +43,8 @@ http_interactions:
       string: '{"data":{"friends":[{"user_id":2,"user_name":"otheruser321","full_name":"Antonio
         King Hunt","phone_number":"555-111-5555"},{"user_id":3,"user_name":"joe123","full_name":"Joe
         Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
-        Ryan","phone_number":"555-999-0000"}]}}'
-  recorded_at: Sun, 25 Jun 2023 16:11:39 GMT
+        Ryan","phone_number":"555-999-0000"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"}]}}'
+  recorded_at: Fri, 30 Jun 2023 18:32:26 GMT
 recorded_with: VCR 6.1.0

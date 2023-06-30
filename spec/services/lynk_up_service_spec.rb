@@ -82,23 +82,23 @@ RSpec.describe LynkUpService do
     end
   end
 
-  # describe "get_friends_for_user`", :vcr do 
-  #   let(:user_friends) { LynkUpService.new.get_friends_for_user(1) }
+  describe "get_friends_for_user`", :vcr do 
+    let(:user_friends) { LynkUpService.new.get_friends_for_user(1) }
 
-  #   it "returns a user friends json object" do
-  #     expect(user_friends).to be_a(Hash)
-  #     expect(user_friends[:data]).to be_a(Hash)
-  #     expect(user_friends[:data].keys).to eq([:friends])
-  #     expect(user_friends[:data][:friends]).to be_an(Array)
-  #     expect(user_friends[:data][:friends].size).to eq(3)
-  #     expect(user_friends[:data][:friends][0]).to be_a(Hash)
-  #     expect(user_friends[:data][:friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
-  #     expect(user_friends[:data][:friends][0][:user_id]).to be_an(Integer)
-  #     expect(user_friends[:data][:friends][0][:user_name]).to be_a(String)
-  #     expect(user_friends[:data][:friends][0][:full_name]).to be_a(String)
-  #     expect(user_friends[:data][:friends][0][:phone_number]).to be_a(String)
-  #   end
-  # end
+    it "returns a user friends json object" do
+      expect(user_friends).to be_a(Hash)
+      expect(user_friends[:data]).to be_a(Hash)
+      expect(user_friends[:data].keys).to eq([:friends])
+      expect(user_friends[:data][:friends]).to be_an(Array)
+      expect(user_friends[:data][:friends].size).to eq(5)
+      expect(user_friends[:data][:friends][0]).to be_a(Hash)
+      expect(user_friends[:data][:friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(user_friends[:data][:friends][0][:user_id]).to be_an(Integer)
+      expect(user_friends[:data][:friends][0][:user_name]).to be_a(String)
+      expect(user_friends[:data][:friends][0][:full_name]).to be_a(String)
+      expect(user_friends[:data][:friends][0][:phone_number]).to be_a(String)
+    end
+  end
 
   # describe "get_all_groups", :vcr do 
   #   let(:groups) { LynkUpService.new.get_all_groups }
