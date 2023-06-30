@@ -155,22 +155,24 @@ RSpec.describe LynkUpService do
   end
 
   describe "add_friend_for_user", :vcr do
-    let(:user_friends) { LynkUpService.new.add_friend_for_user(1, 5) }
+    let(:user_friend) { LynkUpService.new.add_friend_for_user(1, 5) }
 
     it "returns a user friends json object with the added friend" do
-      expect(user_friends).to be_a(Hash)
-      expect(user_friends[:data]).to be_a(Hash)
-      expect(user_friends[:data].keys).to eq([:friends])
-      expect(user_friends[:data][:friends]).to be_an(Array)
-      expect(user_friends[:data][:friends].last).to be_a(Hash)
-      expect(user_friends[:data][:friends].last.keys).to eq([:user_id, :user_name, :full_name, :phone_number])
-      expect(user_friends[:data][:friends].last[:user_id]).to be_an(Integer)
-      expect(user_friends[:data][:friends].last[:user_id]).to eq(5)
-      expect(user_friends[:data][:friends].last[:user_name]).to be_a(String)
-      expect(user_friends[:data][:friends].last[:full_name]).to be_a(String)
-      expect(user_friends[:data][:friends].last[:phone_number]).to be_a(String)
+      expect(user_friend).to be_a(Hash)
+      expect(user_friend[:data]).to be_a(Hash)
+      expect(user_friend[:data].keys).to eq([:friends])
+      expect(user_friend[:data][:friends]).to be_an(Array)
+      expect(user_friend[:data][:friends].last).to be_a(Hash)
+      expect(user_friend[:data][:friends].last.keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(user_friend[:data][:friends].last[:user_id]).to be_an(Integer)
+      expect(user_friend[:data][:friends].last[:user_id]).to eq(5)
+      expect(user_friend[:data][:friends].last[:user_name]).to be_a(String)
+      expect(user_friend[:data][:friends].last[:full_name]).to be_a(String)
+      expect(user_friend[:data][:friends].last[:phone_number]).to be_a(String)
     end
   end
+
+  # describe "delete_friend_for_user", :vcr do
 
   describe "get_all_groups", :vcr do 
     let(:groups) { LynkUpService.new.get_all_groups }
