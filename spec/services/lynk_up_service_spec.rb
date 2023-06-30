@@ -82,6 +82,39 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "update_user", :vcr do
+    let(:user) { LynkUpService.new.update_user(1) }
+
+    it "returns updated user json object" do
+      expect(user).to be_a(Hash)
+      expect(user.keys).to eq([:id, :type, :attributes])
+      expect(user[:id]).to be_an(Integer)
+      expect(user[:type]).to be_a(String)
+      expect(user[:attributes]).to be_a(Hash)
+      expect(user[:attributes].keys).to eq([:user_name, :phone_number, :full_name, :my_events, :invited_to_events, :my_groups, :included_in_groups])
+      expect(user[:attributes][:user_name]).to be_a(String)
+      expect(user[:attributes][:phone_number]).to be_a(String)
+      expect(user[:attributes][:full_name]).to be_a(String)
+      expect(user[:attributes][:my_events]).to be_an(Array)
+      expect(user[:attributes][:my_events][0]).to be_a(Hash)
+      expect(user[:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(user[:attributes][:my_events][0][:id]).to be_an(Integer)
+      expect(user[:attributes][:my_events][0][:group]).to be_an(Integer)
+      expect(user[:attributes][:my_events][0][:group_name]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:title]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:date]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:time]).to be_a(String)
+      expect(user[:attributes][:invited_to_events]).to be_an(Array)
+      expect(user[:attributes][:my_groups]).to be_an(Array)
+      expect(user[:attributes][:my_groups][0]).to be_a(Hash)
+      expect(user[:attributes][:my_groups][0].keys).to eq([:id, :name, :member_count])
+      expect(user[:attributes][:my_groups][0][:id]).to be_an(Integer)
+      expect(user[:attributes][:my_groups][0][:name]).to be_a(String)
+      expect(user[:attributes][:my_groups][0][:member_count]).to be_an(Integer)
+      expect(user[:attributes][:included_in_groups]).to be_an(Array)
+    end
+  end
+
   describe "get_friends_for_user`", :vcr do 
     let(:user_friends) { LynkUpService.new.get_friends_for_user(1) }
 
@@ -97,6 +130,53 @@ RSpec.describe LynkUpService do
       expect(user_friends[:data][:friends][0][:user_name]).to be_a(String)
       expect(user_friends[:data][:friends][0][:full_name]).to be_a(String)
       expect(user_friends[:data][:friends][0][:phone_number]).to be_a(String)
+    end
+  end
+
+  describe "get_friend_for_user", :vcr do
+    let(:user_friend) { LynkUpService.new.get_friend_for_user(1, 6) }
+
+    it "returns a user friend json object" do
+      expect(user_friend).to be_a(Hash)
+      expect(user_friend[:data]).to be_a(Hash)
+      expect(user_friend[:data].keys).to eq([:id, :type, :attributes])
+      expect(user_friend[:data][:id]).to be_an(Integer)
+      expect(user_friend[:data][:type]).to be_a(String)
+      expect(user_friend[:data][:attributes]).to be_a(Hash)
+      expect(user_friend[:data][:attributes].keys).to eq([:user_name, :phone_number, :full_name, :my_events, :invited_to_events, :my_groups, :included_in_groups])
+      expect(user_friend[:data][:attributes][:user_name]).to be_a(String)
+      expect(user_friend[:data][:attributes][:phone_number]).to be_a(String)
+      expect(user_friend[:data][:attributes][:full_name]).to be_a(String)
+      expect(user_friend[:data][:attributes][:my_events]).to be_an(Array)
+      expect(user_friend[:data][:attributes][:invited_to_events]).to be_an(Array)
+      expect(user_friend[:data][:attributes][:my_groups]).to be_an(Array)
+      expect(user_friend[:data][:attributes][:included_in_groups]).to be_an(Array)
+    end
+  end
+
+  describe "add_friend_for_user", :vcr do
+    let(:user_friend) { LynkUpService.new.add_friend_for_user(1, {friend: 5}) }
+
+    it "returns a user friends json object with the added friend" do
+      expect(user_friend).to be_a(Hash)
+      expect(user_friend[:data]).to be_a(Hash)
+      expect(user_friend[:data].keys).to eq([:friends])
+      expect(user_friend[:data][:friends]).to be_an(Array)
+      expect(user_friend[:data][:friends].last).to be_a(Hash)
+      expect(user_friend[:data][:friends].last.keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(user_friend[:data][:friends].last[:user_id]).to be_an(Integer)
+      expect(user_friend[:data][:friends].last[:user_id]).to eq(5)
+      expect(user_friend[:data][:friends].last[:user_name]).to be_a(String)
+      expect(user_friend[:data][:friends].last[:full_name]).to be_a(String)
+      expect(user_friend[:data][:friends].last[:phone_number]).to be_a(String)
+    end
+  end
+
+  describe "delete_friend_for_user", :vcr do
+    let(:response) { LynkUpService.new.delete_friend_for_user(1, 5) }
+
+    it "deletes a friend for a user" do
+      expect(response.status).to eq(204)
     end
   end
 
@@ -162,6 +242,26 @@ RSpec.describe LynkUpService do
       expect(group[:data][:attributes][:group_events][0][:title]).to be_a(String)
       expect(group[:data][:attributes][:group_events][0][:date]).to be_a(String)
       expect(group[:data][:attributes][:group_events][0][:time]).to be_a(String)
+    end
+  end
+
+  describe "create_group", :vcr do
+    let(:group) { LynkUpService.new.create_group({user: 1, name: "New Group"}) }
+
+    it "returns a new group json object" do
+      expect(group).to be_a(Hash)
+      expect(group.keys).to eq([:id, :type, :attributes])
+      expect(group[:id]).to be_an(Integer)
+      expect(group[:type]).to eq('group')
+      expect(group[:attributes]).to be_a(Hash)
+      expect(group[:attributes].keys).to eq([:group_host_id, :group_host_name, :group_name, :group_friends, :group_events])
+      expect(group[:attributes][:group_host_id]).to be_an(Integer)
+      expect(group[:attributes][:group_host_id]).to eq(1)
+      expect(group[:attributes][:group_host_name]).to be_a(String)
+      expect(group[:attributes][:group_name]).to be_a(String)
+      expect(group[:attributes][:group_name]).to eq("New Group")
+      expect(group[:attributes][:group_friends]).to be_an(Array)
+      expect(group[:attributes][:group_events]).to be_an(Array)
     end
   end
 

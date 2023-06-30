@@ -3,15 +3,37 @@ class LynkUpService
     response = connection.get("/users/#{id}/")
 		JSON.parse(response.body, symbolize_names: true)
   end
-
+  
   def get_all_users
     response = connection.get("/users/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def update_user(id)
+    response = connection.patch("/users/#{id}/")
 		JSON.parse(response.body, symbolize_names: true)
   end
 
   def get_friends_for_user(id)
     response = connection.get("/users/#{id}/friends/")
 		JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_friend_for_user(user_id, friend_id)
+    response = connection.get("/users/#{user_id}/friends/#{friend_id}/")
+		JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def add_friend_for_user(id, params)
+    response = connection.post("/users/#{id}/friends/") do |con|
+      con.headers = { "CONTENT_TYPE" => "application/json" }
+			con.body = params
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def delete_friend_for_user(user_id, friend_id)
+    response = connection.delete("/users/#{user_id}/friends/#{friend_id}/")
   end
 
   def get_all_groups
@@ -21,6 +43,14 @@ class LynkUpService
 
   def get_group(id)
     response = connection.get("/groups/#{id}/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def create_group(params)
+    response = connection.post("/groups/") do |con|
+      con.headers = { "CONTENT_TYPE" => "application/json" }
+			con.body = params
+    end
     JSON.parse(response.body, symbolize_names: true)
   end
 
