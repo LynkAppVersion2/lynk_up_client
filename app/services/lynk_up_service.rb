@@ -32,6 +32,10 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def delete_friend_for_user(user_id, friend_id)
+    response = connection.delete("/users/#{user_id}/friends/#{friend_id}/")
+  end
+
   def get_all_groups
     response = connection.get("/groups/")
     JSON.parse(response.body, symbolize_names: true)
