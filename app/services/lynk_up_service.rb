@@ -19,6 +19,11 @@ class LynkUpService
 		JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_friend_for_user(user_id, friend_id)
+    response = connection.get("/users/#{user_id}/friends/#{friend_id}/")
+		JSON.parse(response.body, symbolize_names: true)
+  end
+
   def get_all_groups
     response = connection.get("/groups/")
     JSON.parse(response.body, symbolize_names: true)
