@@ -246,7 +246,9 @@ RSpec.describe LynkUpService do
   end
 
   describe "create_group", :vcr do
-    let(:group) { LynkUpService.new.create_group({user: 1, name: "New Group"}) }
+    let(:group) { LynkUpService.new.create_group({user: 1, name: "New Group", friends_list: [{friend_id: 7}, {friend_id: 8}]}) }
+    let(:group2) { LynkUpService.new.create_group({user: 1, name: "Another New Group"}) }
+
 
     it "returns a new group json object" do
       expect(group).to be_a(Hash)
@@ -260,8 +262,18 @@ RSpec.describe LynkUpService do
       expect(group[:attributes][:group_host_name]).to be_a(String)
       expect(group[:attributes][:group_name]).to be_a(String)
       expect(group[:attributes][:group_name]).to eq("New Group")
-      expect(group[:attributes][:group_friends]).to be_an(Array)
+      expect(group2[:attributes][:group_friends]).to eq([])
+      expect(group[:attributes][:group_friends].count).to eq(2)
+      expect(group[:attributes][:group_friends].first).to be_a(Hash)
+      expect(group[:attributes][:group_friends].first.keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(group[:attributes][:group_friends][0][:user_id]).to eq(7)
+      expect(group[:attributes][:group_friends][1][:user_id]).to eq(8)
+      expect(group[:attributes][:group_friends][0][:user_id]).to be_an(Integer)
+      expect(group[:attributes][:group_friends][0][:user_name]).to be_a(String)
+      expect(group[:attributes][:group_friends][0][:full_name]).to be_a(String)
+      expect(group[:attributes][:group_friends][0][:phone_number]).to be_a(String)
       expect(group[:attributes][:group_events]).to be_an(Array)
+      expect(group[:attributes][:group_events]).to eq([])
     end
   end
 
