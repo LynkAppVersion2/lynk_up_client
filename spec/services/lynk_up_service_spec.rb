@@ -277,6 +277,14 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "delete_group", :vcr do
+    let(:response) { LynkUpService.new.delete_group(1)}
+
+    it "deletes a group" do
+      expect(response.status).to eq(204)
+    end
+  end
+
   describe "get_all_events", :vcr do 
     let(:events) { LynkUpService.new.get_all_events }
 
