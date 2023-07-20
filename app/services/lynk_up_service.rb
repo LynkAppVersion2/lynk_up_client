@@ -57,6 +57,14 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def update_group(id, params)
+    response = connection.patch("/groups/#{id}/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+      con.body = params.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def delete_group(id)
     response = connection.delete("/groups/#{id}/")
   end
