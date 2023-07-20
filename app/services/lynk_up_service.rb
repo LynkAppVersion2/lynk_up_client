@@ -9,8 +9,11 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def update_user(id)
-    response = connection.patch("/users/#{id}/")
+  def update_user(id, params)
+    response = connection.patch("/users/#{id}/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+      con.body = params.to_json
+    end
 		JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -54,6 +57,18 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def update_group(id, params)
+    response = connection.patch("/groups/#{id}/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+      con.body = params.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def delete_group(id)
+    response = connection.delete("/groups/#{id}/")
+  end
+
   def get_all_events
     response = connection.get("/events/")
     JSON.parse(response.body, symbolize_names: true)
@@ -62,6 +77,18 @@ class LynkUpService
   def get_event(id)
     response = connection.get("/events/#{id}/")
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def update_event(id, params)
+    response = connection.patch("/events/#{id}/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+			con.body = params.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def delete_event(id)
+    response = connection.delete("/events/#{id}/")
   end
 
   private 

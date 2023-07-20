@@ -83,7 +83,7 @@ RSpec.describe LynkUpService do
   end
 
   describe "update_user", :vcr do
-    let(:user) { LynkUpService.new.update_user(1) }
+    let(:user) { LynkUpService.new.update_user(1, { user_name: "andra123", phone_number: "999-999-9999", full_name: "Andra Helton" }) }
 
     it "returns updated user json object" do
       expect(user).to be_a(Hash)
@@ -277,6 +277,37 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "update_group", :vcr do
+    let (:group) { LynkUpService.new.update_group(4, { name: "Roller Bladers", friends_list: [{friend_id: 7}] }) }
+
+    it "returns an updated group json object" do
+      expect(group).to be_a(Hash)
+      expect(group.keys).to eq([:id, :type, :attributes])
+      expect(group[:id]).to be_an(Integer)
+      expect(group[:type]).to eq("group")
+      expect(group[:attributes]).to be_a(Hash)
+      expect(group[:attributes][:group_host_id]).to be_an(Integer)
+      expect(group[:attributes][:group_host_name]).to be_a(String)
+      expect(group[:attributes][:group_name]).to be_a(String)
+      expect(group[:attributes][:group_friends]).to be_an(Array)
+      expect(group[:attributes][:group_friends][0]).to be_a(Hash)
+      expect(group[:attributes][:group_friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(group[:attributes][:group_friends][0][:user_id]).to be_an(Integer)
+      expect(group[:attributes][:group_friends][0][:user_name]).to be_a(String)
+      expect(group[:attributes][:group_friends][0][:full_name]).to be_a(String)
+      expect(group[:attributes][:group_friends][0][:phone_number]).to be_a(String)
+      expect(group[:attributes][:group_events]).to be_an(Array)
+    end
+  end
+
+  describe "delete_group", :vcr do
+    let(:response) { LynkUpService.new.delete_group(1)}
+
+    it "deletes a group" do
+      expect(response.status).to eq(204)
+    end
+  end
+
   describe "get_all_events", :vcr do 
     let(:events) { LynkUpService.new.get_all_events }
 
@@ -318,6 +349,40 @@ RSpec.describe LynkUpService do
       expect(event[:data][:invited][0][:user_name]).to be_a(String)
       expect(event[:data][:invited][0][:full_name]).to be_a(String)
       expect(event[:data][:invited][0][:phone_number]).to be_a(String)
+    end
+  end
+
+  describe "update_event", :vcr do
+    let (:event) { LynkUpService.new.update_event(7, {title: "Root - A medium length game", date: "08-04-24", time: "9:00 PM", address: "321 another address St.", description: "BYOB, arrive on time"}) }
+
+    it "returns an event json object" do
+      expect(event).to be_a(Hash)
+      expect(event.keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date, :time, :address, :description, :invited])
+      expect(event[:id]).to be_an(Integer)
+      expect(event[:group]).to be_an(Integer)
+      expect(event[:group_name]).to be_a(String)
+      expect(event[:host_id]).to be_an(Integer)
+      expect(event[:host_name]).to be_a(String)
+      expect(event[:title]).to be_a(String)
+      expect(event[:date]).to be_a(String)
+      expect(event[:time]).to be_a(String)
+      expect(event[:address]).to be_a(String)
+      expect(event[:description]).to be_a(String)
+      expect(event[:invited]).to be_an(Array)
+      expect(event[:invited][0]).to be_a(Hash)
+      expect(event[:invited][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(event[:invited][0][:user_id]).to be_an(Integer)
+      expect(event[:invited][0][:user_name]).to be_a(String)
+      expect(event[:invited][0][:full_name]).to be_a(String)
+      expect(event[:invited][0][:phone_number]).to be_a(String)
+    end
+  end
+
+  describe "delete_event", :vcr do
+    let (:response) { LynkUpService.new.delete_event(7) }
+
+    it "deletes an event" do
+      expect(response.status).to eq(204)
     end
   end
 end
