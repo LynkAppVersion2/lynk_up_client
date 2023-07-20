@@ -71,6 +71,14 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def update_event(id, params)
+    response = connection.patch("/events/#{id}/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+			con.body = params.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private 
 
   def connection
