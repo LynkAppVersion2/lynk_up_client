@@ -54,6 +54,10 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def delete_group(id)
+    response = connection.delete("/groups/#{id}/")
+  end
+
   def get_all_events
     response = connection.get("/events/")
     JSON.parse(response.body, symbolize_names: true)
