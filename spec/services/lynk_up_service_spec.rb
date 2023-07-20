@@ -329,30 +329,29 @@ RSpec.describe LynkUpService do
     end
   end
 
-  # describe "update_event", :vcr do
-  #   let (:event) { LynkUpService.new.update_event(3, {title: "Root - A medium length game", date: "08-04-24", time: "9:00 PM", address: "321 another address St.", description: "BYOB, arrive on time"}) }
+  describe "update_event", :vcr do
+    let (:event) { LynkUpService.new.update_event(7, {title: "Root - A medium length game", date: "08-04-24", time: "9:00 PM", address: "321 another address St.", description: "BYOB, arrive on time"}) }
 
-  #   it "returns an event json object" do
-  #     expect(event).to be_a(Hash)
-  #     expect(event[:data]).to be_a(Hash)
-  #     expect(event[:data].keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date, :time, :address, :description, :invited])
-  #     expect(event[:data][:id]).to be_an(Integer)
-  #     expect(event[:data][:group]).to be_an(Integer)
-  #     expect(event[:data][:group_name]).to be_a(String)
-  #     expect(event[:data][:host_id]).to be_an(Integer)
-  #     expect(event[:data][:host_name]).to be_a(String)
-  #     expect(event[:data][:title]).to be_a(String)
-  #     expect(event[:data][:date]).to be_a(String)
-  #     expect(event[:data][:time]).to be_a(String)
-  #     expect(event[:data][:address]).to be_a(String)
-  #     expect(event[:data][:description]).to be_a(String)
-  #     expect(event[:data][:invited]).to be_an(Array)
-  #     expect(event[:data][:invited][0]).to be_a(Hash)
-  #     expect(event[:data][:invited][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
-  #     expect(event[:data][:invited][0][:user_id]).to be_an(Integer)
-  #     expect(event[:data][:invited][0][:user_name]).to be_a(String)
-  #     expect(event[:data][:invited][0][:full_name]).to be_a(String)
-  #     expect(event[:data][:invited][0][:phone_number]).to be_a(String)
-  #   end
-  # end
+    it "returns an event json object" do
+      expect(event).to be_a(Hash)
+      expect(event.keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date, :time, :address, :description, :invited])
+      expect(event[:id]).to be_an(Integer)
+      expect(event[:group]).to be_an(Integer)
+      expect(event[:group_name]).to be_a(String)
+      expect(event[:host_id]).to be_an(Integer)
+      expect(event[:host_name]).to be_a(String)
+      expect(event[:title]).to be_a(String)
+      expect(event[:date]).to be_a(String)
+      expect(event[:time]).to be_a(String)
+      expect(event[:address]).to be_a(String)
+      expect(event[:description]).to be_a(String)
+      expect(event[:invited]).to be_an(Array)
+      expect(event[:invited][0]).to be_a(Hash)
+      expect(event[:invited][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(event[:invited][0][:user_id]).to be_an(Integer)
+      expect(event[:invited][0][:user_name]).to be_a(String)
+      expect(event[:invited][0][:full_name]).to be_a(String)
+      expect(event[:invited][0][:phone_number]).to be_a(String)
+    end
+  end
 end
