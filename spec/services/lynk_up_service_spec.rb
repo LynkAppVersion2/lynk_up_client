@@ -277,6 +277,29 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "update_group", :vcr do
+    let (:group) { LynkUpService.new.update_group(4, { name: "Roller Bladers", friends_list: [{friend_id: 7}] }) }
+
+    it "returns an updated group json object" do
+      expect(group).to be_a(Hash)
+      expect(group.keys).to eq([:id, :type, :attributes])
+      expect(group[:id]).to be_an(Integer)
+      expect(group[:type]).to eq("group")
+      expect(group[:attributes]).to be_a(Hash)
+      expect(group[:attributes][:group_host_id]).to be_an(Integer)
+      expect(group[:attributes][:group_host_name]).to be_a(String)
+      expect(group[:attributes][:group_name]).to be_a(String)
+      expect(group[:attributes][:group_friends]).to be_an(Array)
+      expect(group[:attributes][:group_friends][0]).to be_a(Hash)
+      expect(group[:attributes][:group_friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+      expect(group[:attributes][:group_friends][0][:user_id]).to be_an(Integer)
+      expect(group[:attributes][:group_friends][0][:user_name]).to be_a(String)
+      expect(group[:attributes][:group_friends][0][:full_name]).to be_a(String)
+      expect(group[:attributes][:group_friends][0][:phone_number]).to be_a(String)
+      expect(group[:attributes][:group_events]).to be_an(Array)
+    end
+  end
+
   describe "delete_group", :vcr do
     let(:response) { LynkUpService.new.delete_group(1)}
 
