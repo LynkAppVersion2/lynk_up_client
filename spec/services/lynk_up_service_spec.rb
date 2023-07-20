@@ -83,7 +83,7 @@ RSpec.describe LynkUpService do
   end
 
   describe "update_user", :vcr do
-    let(:user) { LynkUpService.new.update_user(1) }
+    let(:user) { LynkUpService.new.update_user(1, { user_name: "andra123", phone_number: "999-999-9999", full_name: "Andra Helton" }) }
 
     it "returns updated user json object" do
       expect(user).to be_a(Hash)
@@ -328,4 +328,31 @@ RSpec.describe LynkUpService do
       expect(event[:data][:invited][0][:phone_number]).to be_a(String)
     end
   end
+
+  # describe "update_event", :vcr do
+  #   let (:event) { LynkUpService.new.update_event(3, {title: "Root - A medium length game", date: "08-04-24", time: "9:00 PM", address: "321 another address St.", description: "BYOB, arrive on time"}) }
+
+  #   it "returns an event json object" do
+  #     expect(event).to be_a(Hash)
+  #     expect(event[:data]).to be_a(Hash)
+  #     expect(event[:data].keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date, :time, :address, :description, :invited])
+  #     expect(event[:data][:id]).to be_an(Integer)
+  #     expect(event[:data][:group]).to be_an(Integer)
+  #     expect(event[:data][:group_name]).to be_a(String)
+  #     expect(event[:data][:host_id]).to be_an(Integer)
+  #     expect(event[:data][:host_name]).to be_a(String)
+  #     expect(event[:data][:title]).to be_a(String)
+  #     expect(event[:data][:date]).to be_a(String)
+  #     expect(event[:data][:time]).to be_a(String)
+  #     expect(event[:data][:address]).to be_a(String)
+  #     expect(event[:data][:description]).to be_a(String)
+  #     expect(event[:data][:invited]).to be_an(Array)
+  #     expect(event[:data][:invited][0]).to be_a(Hash)
+  #     expect(event[:data][:invited][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
+  #     expect(event[:data][:invited][0][:user_id]).to be_an(Integer)
+  #     expect(event[:data][:invited][0][:user_name]).to be_a(String)
+  #     expect(event[:data][:invited][0][:full_name]).to be_a(String)
+  #     expect(event[:data][:invited][0][:phone_number]).to be_a(String)
+  #   end
+  # end
 end

@@ -9,8 +9,11 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def update_user(id)
-    response = connection.patch("/users/#{id}/")
+  def update_user(id, params)
+    response = connection.patch("/users/#{id}/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+      con.body = params.to_json
+    end
 		JSON.parse(response.body, symbolize_names: true)
   end
 
