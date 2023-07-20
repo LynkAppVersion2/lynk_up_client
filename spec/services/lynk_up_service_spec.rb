@@ -354,4 +354,12 @@ RSpec.describe LynkUpService do
       expect(event[:invited][0][:phone_number]).to be_a(String)
     end
   end
+
+  describe "delete_event", :vcr do
+    let (:response) { LynkUpService.new.delete_event(7) }
+
+    it "deletes an event" do
+      expect(response.status).to eq(204)
+    end
+  end
 end
