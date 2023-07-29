@@ -9,12 +9,12 @@ RSpec.describe Friend do
     expect(friend.phone_number).to be_a(String)
     expect(friend.full_name).to be_a(String)
     expect(friend.my_events).to be_an(Array)
-    expect(friend.my_events.first).to be_an(EventList).or be_nil
+    expect(friend.my_events.first).to be_an(EventListEvent).or be_nil
     expect(friend.invited_to_events).to be_an(Array)
-    expect(friend.invited_to_events.first).to be_an(EventList).or be_nil
+    expect(friend.invited_to_events.first).to be_an(EventListEvent).or be_nil
     expect(friend.my_groups).to be_an(Array)
-    expect(friend.my_groups.first).to be_a(GroupList)
+    expect(friend.my_groups.first).to be_a(GroupListGroup)
     expect(friend.included_in_groups).to be_an(Array)
-    expect(friend.included_in_groups.first).to be_a(GroupList)
+    expect(friend.included_in_groups.first).to be_a(GroupListGroup)
   end
 end

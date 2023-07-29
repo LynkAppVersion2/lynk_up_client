@@ -23,7 +23,7 @@ class Event
 
   def add_invited(info)
     if info
-      info.map { |friend| FriendList.new(friend) }
+      info.map { |friend| FriendListFriend.new(friend) }
     end
   end
 end

@@ -1,4 +1,4 @@
-class GroupList
+class GroupListGroup
   attr_reader :id,
               :name,
               :member_count

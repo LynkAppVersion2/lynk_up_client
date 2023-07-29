@@ -17,13 +17,13 @@ class Group
 
   def add_friends(info)
     if info
-      info.map { |friend| FriendList.new(friend) }
+      info.map { |friend| FriendListFriend.new(friend) }
     end
   end
 
   def add_events(info)
     if info
-      info.map { |event| EventList.new(event) }
+      info.map { |event| EventListEvent.new(event) }
     end
   end
 end

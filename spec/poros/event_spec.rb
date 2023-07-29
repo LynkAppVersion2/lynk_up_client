@@ -13,6 +13,6 @@ RSpec.describe Event do
     expect(event.address).to be_a(String)
     expect(event.description).to be_a(String)
     expect(event.invited).to be_an(Array)
-    expect(event.invited.first).to be_a(FriendList)
+    expect(event.invited.first).to be_a(FriendListFriend)
   end
 end

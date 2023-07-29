@@ -9,12 +9,12 @@ RSpec.describe User do
     expect(user.phone_number).to be_a(String)
     expect(user.full_name).to be_a(String)
     expect(user.my_events).to be_an(Array)
-    expect(user.my_events.first).to be_an(EventList)
+    expect(user.my_events.first).to be_an(EventListEvent)
     expect(user.invited_to_events).to be_an(Array)
-    expect(user.invited_to_events.last).to be_an(EventList).or be_nil
+    expect(user.invited_to_events.last).to be_an(EventListEvent).or be_nil
     expect(user.my_groups).to be_an(Array)
-    expect(user.my_groups.first).to be_a(GroupList).or be_nil
+    expect(user.my_groups.first).to be_a(GroupListGroup).or be_nil
     expect(user.included_in_groups).to be_an(Array)
-    expect(user.included_in_groups.first).to be_a(GroupList).or be_nil
+    expect(user.included_in_groups.first).to be_a(GroupListGroup).or be_nil
   end
 end

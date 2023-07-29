@@ -21,25 +21,25 @@ class Friend
 
   def add_my_events(info)
     if info
-      info.map { |event| EventList.new(event) }
+      info.map { |event| EventListEvent.new(event) }
     end
   end
 
   def add_invited_to_events(info)
     if info
-      info.map { |event| EventList.new(event) }
+      info.map { |event| EventListEvent.new(event) }
     end
   end
 
   def add_my_groups(info)
     if info
-      info.map { |group| GroupList.new(group) }
+      info.map { |group| GroupListGroup.new(group) }
     end
   end
 
   def add_included_in_groups(info)
     if info
-      info.map { |group| GroupList.new(group) }
+      info.map { |group| GroupListGroup.new(group) }
     end
   end
 end
