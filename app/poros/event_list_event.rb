@@ -1,4 +1,4 @@
-class EventList
+class EventListEvent
   attr_reader :id,
               :group,
               :group_name,
