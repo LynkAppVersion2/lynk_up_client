@@ -11,7 +11,10 @@ RSpec.describe "Application Pages", type: :feature do
       end
 
       it "I see my full name" do
-        expect(page).to have_content("Andra Helton")
+        visit "/users/#{user.id}/events"
+        expect(page).to have_link("Andra Helton")
+        click_link "Andra Helton"
+        expect(current_path).to eq("/users/#{user.id}/dashboard")
       end
 
       describe "I see a Menu" do

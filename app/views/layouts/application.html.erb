@@ -12,7 +12,7 @@
 
   <body>
     <div class="nav-container"></div>
-      <h1 class="navbar-text"><%= current_user.full_name %></h1>
+      <h1 class="navbar-text"><%= link_to "#{current_user.full_name}", "/users/#{current_user.id}/dashboard" %></h1>
       <nav class="menu">
         <ul class="menu-options">
           <li><%= link_to 'Events', "/users/#{current_user.id}/events" %>
