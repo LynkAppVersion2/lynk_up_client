@@ -15,8 +15,10 @@ RSpec.describe "Users Dashboard" do
       end
 
       describe "I see an Events section" do
-        it "I see the 'Events' title over the section" do
+        it "I see headings for each type of events section" do
           expect(page).to have_content("Events")
+          expect(page).to have_content("My Events")
+          expect(page).to have_content("Event Invitations")
         end
 
         describe "I see 'My Events'" do
