@@ -5,7 +5,6 @@ RSpec.describe "Users Dashboard" do
     let!(:user) { LynkUpFacade.new.find_user(1) }
     let!(:user7) { LynkUpFacade.new.find_user(7) }
 
-
     describe "When I visit my dashboard", :vcr do
       before do
         visit "/users/#{user.id}/dashboard"
@@ -22,11 +21,16 @@ RSpec.describe "Users Dashboard" do
 
         describe "I see 'My Events'" do
           context "For each event" do
-            it "I see the event name, date, and time" do
-              within("#event-#{user.my_events[0].id}") do
-                expect(page).to have_content("Root - A medium length game")
+            it "I see the event info and name as a link to its show page" do
+              event = user.my_events[0]
+
+              within("#event-#{event.id}") do
+                expect(page).to have_link("Root - A medium length game")
                 expect(page).to have_content("9:00 PM")
                 expect(page).to have_content("08-04-24")
+
+                click_link "Root - A medium length game"
+                expect(current_path).to eq("/users/#{user.id}/events/#{event.id}")
               end
             end
 
@@ -39,11 +43,16 @@ RSpec.describe "Users Dashboard" do
 
         describe "I see 'Invited to' events" do
           context "For each event" do
-            it "I see the event name, date, and time" do
-              within("#event-#{user7.invited_to_events[1].id}") do
-                expect(page).to have_content("Denver Night Hang")
+            it "I see the event info and name as a link to its show page" do
+              event = user7.invited_to_events[1]
+
+              within("#event-#{event.id}") do
+                expect(page).to have_link("Denver Night Hang")
                 expect(page).to have_content("8:00 PM")
                 expect(page).to have_content("06-05-23")
+
+                click_link "Denver Night Hang"
+                expect(current_path).to eq("/users/#{user.id}/events/#{event.id}")
               end
             end
 
