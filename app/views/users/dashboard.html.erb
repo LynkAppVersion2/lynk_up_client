@@ -1,0 +1,16 @@
+<h1><%= @user.full_name %></h1>
+
+<h3>Events</h3>
+
+<% if @user.my_events.present? %>
+  <% @user.my_events.each do |event|%>
+    <div id="event-<%= event.id%>">
+      <h4><%= event.title %></h4>
+      <p><%= event.time %></p>
+      <p><%= event.date %></p>
+    </div>
+    <br>
+  <% end %>
+<% else %>
+  No Events Scheduled
+<% end %>

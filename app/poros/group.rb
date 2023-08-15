@@ -1,4 +1,4 @@
-class Group
+  class Group
   attr_reader :id,
               :host_id,
               :host_name,
