@@ -41,6 +41,12 @@ RSpec.describe "Users Dashboard" do
               expect(page).to have_content("No Events Created")
             end
           end
+
+          it "I see a button to create an event that takes me to a new page" do
+            expect(page).to have_button("Create Event")
+            click_button "Create Event"
+            expect(current_path).to eq("/users/#{user.id}/events/new")
+          end
         end
 
         describe "I see 'Invited to' events" do
