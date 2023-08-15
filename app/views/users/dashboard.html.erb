@@ -12,5 +12,20 @@
     <br>
   <% end %>
 <% else %>
-  No Events Scheduled
+  No Events Created
+<% end %>
+
+<br>
+
+<% if @user.invited_to_events.present? %>
+  <% @user.invited_to_events.each do |event|%>
+    <div id="event-<%= event.id%>">
+      <h4><%= event.title %></h4>
+      <p><%= event.time %></p>
+      <p><%= event.date %></p>
+    </div>
+    <br>
+  <% end %>
+<% else %>
+  No Event Invitations
 <% end %>
