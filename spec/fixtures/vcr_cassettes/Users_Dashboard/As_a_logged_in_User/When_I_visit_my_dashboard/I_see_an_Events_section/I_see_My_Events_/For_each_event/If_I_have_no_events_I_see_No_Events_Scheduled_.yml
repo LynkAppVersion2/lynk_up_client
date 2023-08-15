@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Aug 2023 02:27:37 GMT
+      - Tue, 15 Aug 2023 02:42:03 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -61,10 +61,10 @@ http_interactions:
         Air Painting","member_count":2},{"id":34,"name":"Plein Air Painting","member_count":1},{"id":35,"name":"Plein
         Air Painting","member_count":1},{"id":36,"name":"Plein Air Painting","member_count":0},{"id":37,"name":"Plein
         Air Painting","member_count":1},{"id":38,"name":"Plein Air Painting","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Tue, 15 Aug 2023 02:27:37 GMT
+  recorded_at: Tue, 15 Aug 2023 02:42:03 GMT
 - request:
     method: get
-    uri: http://localhost:8000/users/2/
+    uri: http://localhost:8000/users/7/
     body:
       encoding: US-ASCII
       string: ''
@@ -81,7 +81,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Aug 2023 02:27:37 GMT
+      - Tue, 15 Aug 2023 02:42:03 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -93,7 +93,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '796'
+      - '788'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -102,15 +102,16 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":2,"type":"user","attributes":{"user_name":"otheruser321","phone_number":"555-111-5555","full_name":"Antonio
-        King Hunt","my_events":[],"invited_to_events":[],"my_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
-        Bladers","member_count":4}],"included_in_groups":[{"id":9,"name":"Plein Air
-        Painting","member_count":2},{"id":17,"name":"Plein Air Painting","member_count":2},{"id":19,"name":"Plein
-        Air Painting","member_count":2},{"id":28,"name":"Plein Air Painting","member_count":2},{"id":33,"name":"Plein
-        Air Painting","member_count":2},{"id":34,"name":"Plein Air Painting","member_count":1},{"id":35,"name":"Plein
-        Air Painting","member_count":1},{"id":37,"name":"Plein Air Painting","member_count":1},{"id":38,"name":"Plein
+      string: '{"data":{"id":7,"type":"user","attributes":{"user_name":"trevor123","phone_number":"555-222-3333","full_name":"Trevor
+        Fitzgerald","my_events":[],"invited_to_events":[{"id":4,"group":2,"group_name":"Friday
+        Night Hangs","title":"Root - A medium length game","date":"08-04-24","time":"9:00
+        PM"},{"id":8,"group":2,"group_name":"Friday Night Hangs","title":"Denver Night
+        Hang","date":"06-05-23","time":"8:00 PM"}],"my_groups":[],"included_in_groups":[{"id":2,"name":"Friday
+        Night Hangs","member_count":2},{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladers","member_count":4},{"id":26,"name":"New Group","member_count":2},{"id":29,"name":"New
+        Group","member_count":2},{"id":30,"name":"New Group","member_count":2},{"id":38,"name":"Plein
         Air Painting","member_count":2}]}}}'
-  recorded_at: Tue, 15 Aug 2023 02:27:37 GMT
+  recorded_at: Tue, 15 Aug 2023 02:42:03 GMT
 - request:
     method: get
     uri: http://localhost:8000/users/1/
@@ -130,7 +131,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Aug 2023 02:27:37 GMT
+      - Tue, 15 Aug 2023 02:42:03 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -172,10 +173,10 @@ http_interactions:
         Air Painting","member_count":2},{"id":34,"name":"Plein Air Painting","member_count":1},{"id":35,"name":"Plein
         Air Painting","member_count":1},{"id":36,"name":"Plein Air Painting","member_count":0},{"id":37,"name":"Plein
         Air Painting","member_count":1},{"id":38,"name":"Plein Air Painting","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Tue, 15 Aug 2023 02:27:37 GMT
+  recorded_at: Tue, 15 Aug 2023 02:42:03 GMT
 - request:
     method: get
-    uri: http://localhost:8000/users/2/
+    uri: http://localhost:8000/users/7/
     body:
       encoding: US-ASCII
       string: ''
@@ -192,7 +193,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Aug 2023 02:27:37 GMT
+      - Tue, 15 Aug 2023 02:42:03 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -204,7 +205,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '796'
+      - '788'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -213,13 +214,14 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":2,"type":"user","attributes":{"user_name":"otheruser321","phone_number":"555-111-5555","full_name":"Antonio
-        King Hunt","my_events":[],"invited_to_events":[],"my_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
-        Bladers","member_count":4}],"included_in_groups":[{"id":9,"name":"Plein Air
-        Painting","member_count":2},{"id":17,"name":"Plein Air Painting","member_count":2},{"id":19,"name":"Plein
-        Air Painting","member_count":2},{"id":28,"name":"Plein Air Painting","member_count":2},{"id":33,"name":"Plein
-        Air Painting","member_count":2},{"id":34,"name":"Plein Air Painting","member_count":1},{"id":35,"name":"Plein
-        Air Painting","member_count":1},{"id":37,"name":"Plein Air Painting","member_count":1},{"id":38,"name":"Plein
+      string: '{"data":{"id":7,"type":"user","attributes":{"user_name":"trevor123","phone_number":"555-222-3333","full_name":"Trevor
+        Fitzgerald","my_events":[],"invited_to_events":[{"id":4,"group":2,"group_name":"Friday
+        Night Hangs","title":"Root - A medium length game","date":"08-04-24","time":"9:00
+        PM"},{"id":8,"group":2,"group_name":"Friday Night Hangs","title":"Denver Night
+        Hang","date":"06-05-23","time":"8:00 PM"}],"my_groups":[],"included_in_groups":[{"id":2,"name":"Friday
+        Night Hangs","member_count":2},{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladers","member_count":4},{"id":26,"name":"New Group","member_count":2},{"id":29,"name":"New
+        Group","member_count":2},{"id":30,"name":"New Group","member_count":2},{"id":38,"name":"Plein
         Air Painting","member_count":2}]}}}'
-  recorded_at: Tue, 15 Aug 2023 02:27:37 GMT
+  recorded_at: Tue, 15 Aug 2023 02:42:03 GMT
 recorded_with: VCR 6.1.0
