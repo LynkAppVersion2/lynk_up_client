@@ -3,6 +3,8 @@
 <h2>Events</h2>
 
 <h3>My Events</h3>
+<p><%= button_to "Create Event", "/users/#{@user.id}/events/new", method: :get %></p>
+
 <% if @user.my_events.present? %>
   <% @user.my_events.each do |event|%>
     <div id="event-<%= event.id%>">
@@ -15,7 +17,6 @@
 <% else %>
   No Events Created
 <% end %>
-
 <br>
 <br>
 
@@ -27,7 +28,6 @@
       <p><%= event.time %></p>
       <p><%= event.date %></p>
     </div>
-    <br>
   <% end %>
 <% else %>
   No Event Invitations
