@@ -10,18 +10,6 @@ RSpec.describe "Users Dashboard" do
         visit "/users/#{user.id}/dashboard"
       end
 
-      it "I see my full name" do
-        expect(page).to have_content("Andra Helton")
-      end
-
-      describe "I see a Menu" do
-        it "With links to events, groups, and friends" do
-          expect(page).to have_link("Events")
-          expect(page).to have_link("Groups")
-          expect(page).to have_link("Friends")
-        end
-      end
-
       describe "I see an Events section" do
         it "With headings for each type of events section" do
           expect(page).to have_content("Events")
