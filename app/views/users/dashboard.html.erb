@@ -1,31 +1,37 @@
-<h1><%= @user.full_name %></h1>
+<h2>Events</h2>
 
-<h3>Events</h3>
-
-<% if @user.my_events.present? %>
-  <% @user.my_events.each do |event|%>
-    <div id="event-<%= event.id%>">
-      <h4><%= event.title %></h4>
-      <p><%= event.time %></p>
-      <p><%= event.date %></p>
-    </div>
-    <br>
-  <% end %>
-<% else %>
-  No Events Created
-<% end %>
-
+<h3>My Events</h3>
+<p><%= button_to "Create Event", "/users/#{@user.id}/events/new", method: :get %></p>
 <br>
 
-<% if @user.invited_to_events.present? %>
-  <% @user.invited_to_events.each do |event|%>
+<h4>Upcoming Events<h4>
+<% if @upcoming_events.present? %>
+  <% @upcoming_events.each do |event|%>
     <div id="event-<%= event.id%>">
-      <h4><%= event.title %></h4>
+      <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
       <p><%= event.time %></p>
       <p><%= event.date %></p>
     </div>
     <br>
   <% end %>
 <% else %>
-  No Event Invitations
+  No Upcoming Events
 <% end %>
+<br>
+<br>
+
+<h4>Past Events</h4>
+<% if @past_events.present? %>
+  <% @past_events.each do |event|%>
+    <div id="event-<%= event.id%>">
+      <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p><%= event.time %></p>
+      <p><%= event.date %></p>
+    </div>
+    <br>
+  <% end %>
+<% else %>
+  No Past Events
+<% end %>
+<br>
+<br>
