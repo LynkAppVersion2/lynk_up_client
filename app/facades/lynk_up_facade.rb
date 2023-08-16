@@ -5,7 +5,42 @@ class LynkUpFacade
 
   def find_user(id)
     json = @service.get_user(id)
-    User.new(json[:data])
+    user = User.new(json[:data])
+  end
+
+  def datetime_parser(event)
+    date_split = event.date.split("-")
+    time_split = event.time.split(":")
+    DateTime.new(date_split[0].to_i, date_split[1].to_i, date_split[2].to_i, time_split[0].to_i, time_split[1].to_i, time_split[2].to_i)
+  end
+  
+  def sort_events(events)
+    sorted_events = events.sort_by do |event|
+      datetime_parser(event)
+    end
+  
+    sorted_events
+  end
+
+  def combine_events(my_events, invited_to_events)
+    all_events = []
+    all_events << my_events
+    all_events << invited_to_events
+
+    sort_events(all_events.flatten)
+  end
+
+  
+  def upcoming_events(events)
+    events.select do |event|
+      event if DateTime.now <= datetime_parser(event)
+    end
+  end
+
+  def past_events(events)
+    events.select do |event|
+      event if DateTime.now > datetime_parser(event)
+    end.reverse
   end
 
   def find_all_users
@@ -66,5 +101,3 @@ class LynkUpFacade
     Event.new(json)
   end
 end
-
-# change nil values to empty array in poros
