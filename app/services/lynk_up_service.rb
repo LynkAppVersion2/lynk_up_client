@@ -49,6 +49,11 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_group_friends(group_id)
+    response = connection.get("/groups/#{group_id}/friends/")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def create_group(params)
     response = connection.post("/groups/") do |con|
       con.headers = { "Content-Type" => "application/json" }
