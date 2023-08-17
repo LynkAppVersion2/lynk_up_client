@@ -11,6 +11,8 @@
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
       <p><%= event.time %></p>
       <p><%= event.date %></p>
+      <!--<%# <p><%= "#{event.time.strftime("%I:%M %p")} on #{event.date.strftime("%m/%d/%y")}" %></p> %> -->
+
     </div>
     <br>
   <% end %>

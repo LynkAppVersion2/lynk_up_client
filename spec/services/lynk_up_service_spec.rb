@@ -242,7 +242,7 @@ RSpec.describe LynkUpService do
   describe "get_group_friends", :vcr do 
     let(:friends) { LynkUpService.new.get_group_friends(2) }
 
-    it "returns a group json object" do
+    it "returns a group friends json object" do
       expect(friends).to be_a(Hash)
       expect(friends.keys).to eq([:friends])
       expect(friends[:friends]).to be_an(Array)
