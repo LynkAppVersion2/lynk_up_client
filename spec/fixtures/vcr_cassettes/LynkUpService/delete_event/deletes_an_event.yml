@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://localhost:8000/events/7/
+    uri: http://localhost:8000/events/4/
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Thu, 20 Jul 2023 01:31:35 GMT
+      - Thu, 17 Aug 2023 02:58:47 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Vary:
       - Accept, origin
       Allow:
-      - DELETE, OPTIONS, GET, PATCH
+      - OPTIONS, DELETE, PATCH, GET
       X-Frame-Options:
       - DENY
       Content-Length:
@@ -39,5 +39,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 20 Jul 2023 01:31:35 GMT
+  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
 recorded_with: VCR 6.1.0

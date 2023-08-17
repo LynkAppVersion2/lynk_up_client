@@ -21,7 +21,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Mon, 03 Jul 2023 23:55:13 GMT
+      - Thu, 17 Aug 2023 02:58:47 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -29,7 +29,7 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - OPTIONS, GET, POST
+      - POST, OPTIONS, GET
       X-Frame-Options:
       - DENY
       Content-Length:
@@ -42,11 +42,11 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"id":30,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+      string: '{"id":24,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
         Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
         Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}}'
-  recorded_at: Mon, 03 Jul 2023 23:55:13 GMT
+  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
 - request:
     method: post
     uri: http://localhost:8000/groups/
@@ -68,7 +68,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Mon, 03 Jul 2023 23:55:13 GMT
+      - Thu, 17 Aug 2023 02:58:47 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -76,7 +76,7 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - OPTIONS, GET, POST
+      - POST, OPTIONS, GET
       X-Frame-Options:
       - DENY
       Content-Length:
@@ -89,7 +89,7 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"id":31,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+      string: '{"id":25,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
         Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}}'
-  recorded_at: Mon, 03 Jul 2023 23:55:13 GMT
+  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
 recorded_with: VCR 6.1.0

@@ -19,13 +19,13 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Fri, 30 Jun 2023 19:52:21 GMT
+      - Thu, 17 Aug 2023 02:58:47 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Vary:
       - Accept, origin
       Allow:
-      - GET, OPTIONS, DELETE
+      - OPTIONS, DELETE, GET
       X-Frame-Options:
       - DENY
       Content-Length:
@@ -39,5 +39,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 30 Jun 2023 19:52:21 GMT
+  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
 recorded_with: VCR 6.1.0

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Jun 2023 18:33:56 GMT
+      - Thu, 17 Aug 2023 02:58:47 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - GET, OPTIONS, POST
+      - POST, OPTIONS, GET
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '2425'
+      - '5603'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -40,29 +40,50 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":1,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
-        Helton","group_name":"Game Night","group_friends":[{"user_id":3,"user_name":"joe123","full_name":"Joe
-        Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
-        Ryan","phone_number":"555-999-0000"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
-        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
-        Deribeaux","phone_number":"555-222-9999"}],"group_events":[{"id":1,"group":1,"group_name":"Game
-        Night","title":"Space Catan","date":"05-20-23","time":"8:00 PM"},{"id":2,"group":1,"group_name":"Game
-        Night","title":"Zombicide","date":"05-30-23","time":"8:00 PM"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root - A medium length game","date":"08-04-24","time":"9:00
-        PM"}]}},{"id":2,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
-        Helton","group_name":"Friday Night Hangs","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+      string: '{"data":[{"id":2,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Friday Night Hangs","group_friends":[{"user_id":2,"user_name":"otheruser321","full_name":"Antonio
+        King Hunt","phone_number":"555-111-5555"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
         Deribeaux","phone_number":"555-222-9999"}],"group_events":[{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date":"06-01-23","time":"8:00
-        PM"},{"id":5,"group":2,"group_name":"Friday Night Hangs","title":"Renaissance
-        Festival Afterparty","date":"06-07-23","time":"6:00 PM"}]}},{"id":3,"type":"group","attributes":{"group_host_id":2,"group_host_name":"Antonio
+        Night Hangs","title":"Going to the Movies","date_time":"2023-06-01T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}]}},{"id":3,"type":"group","attributes":{"group_host_id":2,"group_host_name":"Antonio
         King Hunt","group_name":"Brunch","group_friends":[{"user_id":4,"user_name":"harrison321","full_name":"Harrison
         Ryan","phone_number":"555-999-0000"},{"user_id":6,"user_name":"william321","full_name":"William
         Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"}],"group_events":[]}},{"id":4,"type":"group","attributes":{"group_host_id":2,"group_host_name":"Antonio
         King Hunt","group_name":"Roller Bladers","group_friends":[{"user_id":6,"user_name":"william321","full_name":"William
-        Lampke","phone_number":"555-222-1111"},{"user_id":8,"user_name":"gus123","full_name":"Gus
-        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":6,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
-        Helton","group_name":"Plein Air Painting","group_friends":[],"group_events":[]}}]}'
-  recorded_at: Fri, 30 Jun 2023 18:33:56 GMT
+        Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":5,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[],"group_events":[]}},{"id":6,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}},{"id":7,"type":"group","attributes":{"group_host_id":5,"group_host_name":"Dawson
+        Timmons","group_name":"Mini Road Trips","group_friends":[],"group_events":[]}},{"id":8,"type":"group","attributes":{"group_host_id":5,"group_host_name":"Dawson
+        Timmons","group_name":"Mini Road Trips","group_friends":[],"group_events":[]}},{"id":9,"type":"group","attributes":{"group_host_id":5,"group_host_name":"Dawson
+        Timmons","group_name":"Mini Road Trips","group_friends":[],"group_events":[]}},{"id":10,"type":"group","attributes":{"group_host_id":5,"group_host_name":"Dawson
+        Timmons","group_name":"Mini Road Trips","group_friends":[],"group_events":[]}},{"id":11,"type":"group","attributes":{"group_host_id":5,"group_host_name":"Dawson
+        Timmons","group_name":"Mini Road Trips","group_friends":[],"group_events":[]}},{"id":12,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":13,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}},{"id":14,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":15,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}},{"id":16,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":17,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}},{"id":18,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":19,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}},{"id":20,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":22,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"New Group","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[]}},{"id":23,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
+        Helton","group_name":"Another New Group","group_friends":[],"group_events":[]}}]}'
+  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
 recorded_with: VCR 6.1.0

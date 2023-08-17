@@ -17,13 +17,12 @@ RSpec.describe LynkUpService do
       expect(user[:data][:attributes][:full_name]).to be_a(String)
       expect(user[:data][:attributes][:my_events]).to be_an(Array)
       expect(user[:data][:attributes][:my_events][0]).to be_a(Hash)
-      expect(user[:data][:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(user[:data][:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date_time])
       expect(user[:data][:attributes][:my_events][0][:id]).to be_an(Integer)
       expect(user[:data][:attributes][:my_events][0][:group]).to be_an(Integer)
       expect(user[:data][:attributes][:my_events][0][:group_name]).to be_a(String)
       expect(user[:data][:attributes][:my_events][0][:title]).to be_a(String)
-      expect(user[:data][:attributes][:my_events][0][:date]).to be_a(String)
-      expect(user[:data][:attributes][:my_events][0][:time]).to be_a(String)
+      expect(user[:data][:attributes][:my_events][0][:date_time]).to be_a(String)
       expect(user[:data][:attributes][:invited_to_events]).to be_an(Array)
       expect(user[:data][:attributes][:my_groups]).to be_an(Array)
       expect(user[:data][:attributes][:my_groups][0]).to be_a(Hash)
@@ -51,34 +50,32 @@ RSpec.describe LynkUpService do
       expect(user[:data][0][:attributes][:full_name]).to be_a(String)
       expect(user[:data][0][:attributes][:my_events]).to be_an(Array)
       expect(user[:data][0][:attributes][:my_events][0]).to be_a(Hash)
-      expect(user[:data][0][:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(user[:data][0][:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date_time])
       expect(user[:data][0][:attributes][:my_events][0][:id]).to be_an(Integer)
       expect(user[:data][0][:attributes][:my_events][0][:group]).to be_an(Integer)
       expect(user[:data][0][:attributes][:my_events][0][:group_name]).to be_a(String)
       expect(user[:data][0][:attributes][:my_events][0][:title]).to be_a(String)
-      expect(user[:data][0][:attributes][:my_events][0][:date]).to be_a(String)
-      expect(user[:data][0][:attributes][:my_events][0][:time]).to be_a(String)
-      expect(user[:data][2][:attributes][:invited_to_events]).to be_an(Array)
-      expect(user[:data][2][:attributes][:invited_to_events][0]).to be_a(Hash)
-      expect(user[:data][2][:attributes][:invited_to_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
-      expect(user[:data][2][:attributes][:invited_to_events][0][:id]).to be_an(Integer)
-      expect(user[:data][2][:attributes][:invited_to_events][0][:group]).to be_an(Integer)
-      expect(user[:data][2][:attributes][:invited_to_events][0][:group_name]).to be_a(String)
-      expect(user[:data][2][:attributes][:invited_to_events][0][:title]).to be_a(String)
-      expect(user[:data][2][:attributes][:invited_to_events][0][:date]).to be_a(String)
-      expect(user[:data][2][:attributes][:invited_to_events][0][:time]).to be_a(String)
+      expect(user[:data][0][:attributes][:my_events][0][:date_time]).to be_a(String)
+      expect(user[:data][1][:attributes][:invited_to_events]).to be_an(Array)
+      expect(user[:data][1][:attributes][:invited_to_events][0]).to be_a(Hash)
+      expect(user[:data][1][:attributes][:invited_to_events][0].keys).to eq([:id, :group, :group_name, :title, :date_time])
+      expect(user[:data][1][:attributes][:invited_to_events][0][:id]).to be_an(Integer)
+      expect(user[:data][1][:attributes][:invited_to_events][0][:group]).to be_an(Integer)
+      expect(user[:data][1][:attributes][:invited_to_events][0][:group_name]).to be_a(String)
+      expect(user[:data][1][:attributes][:invited_to_events][0][:title]).to be_a(String)
+      expect(user[:data][1][:attributes][:invited_to_events][0][:date_time]).to be_a(String)
       expect(user[:data][0][:attributes][:my_groups]).to be_an(Array)
       expect(user[:data][0][:attributes][:my_groups][0]).to be_a(Hash)
       expect(user[:data][0][:attributes][:my_groups][0].keys).to eq([:id, :name, :member_count])
       expect(user[:data][0][:attributes][:my_groups][0][:id]).to be_an(Integer)
       expect(user[:data][0][:attributes][:my_groups][0][:name]).to be_a(String)
       expect(user[:data][0][:attributes][:my_groups][0][:member_count]).to be_an(Integer)
-      expect(user[:data][2][:attributes][:included_in_groups]).to be_an(Array)
-      expect(user[:data][2][:attributes][:included_in_groups][0]).to be_a(Hash)
-      expect(user[:data][2][:attributes][:included_in_groups][0].keys).to eq([:id, :name, :member_count])
-      expect(user[:data][2][:attributes][:included_in_groups][0][:id]).to be_an(Integer)
-      expect(user[:data][2][:attributes][:included_in_groups][0][:name]).to be_a(String)
-      expect(user[:data][2][:attributes][:included_in_groups][0][:member_count]).to be_an(Integer)
+      expect(user[:data][1][:attributes][:included_in_groups]).to be_an(Array)
+      expect(user[:data][1][:attributes][:included_in_groups][0]).to be_a(Hash)
+      expect(user[:data][1][:attributes][:included_in_groups][0].keys).to eq([:id, :name, :member_count])
+      expect(user[:data][1][:attributes][:included_in_groups][0][:id]).to be_an(Integer)
+      expect(user[:data][1][:attributes][:included_in_groups][0][:name]).to be_a(String)
+      expect(user[:data][1][:attributes][:included_in_groups][0][:member_count]).to be_an(Integer)
     end
   end
 
@@ -97,13 +94,12 @@ RSpec.describe LynkUpService do
       expect(user[:attributes][:full_name]).to be_a(String)
       expect(user[:attributes][:my_events]).to be_an(Array)
       expect(user[:attributes][:my_events][0]).to be_a(Hash)
-      expect(user[:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(user[:attributes][:my_events][0].keys).to eq([:id, :group, :group_name, :title, :date_time])
       expect(user[:attributes][:my_events][0][:id]).to be_an(Integer)
       expect(user[:attributes][:my_events][0][:group]).to be_an(Integer)
       expect(user[:attributes][:my_events][0][:group_name]).to be_a(String)
       expect(user[:attributes][:my_events][0][:title]).to be_a(String)
-      expect(user[:attributes][:my_events][0][:date]).to be_a(String)
-      expect(user[:attributes][:my_events][0][:time]).to be_a(String)
+      expect(user[:attributes][:my_events][0][:date_time]).to be_a(String)
       expect(user[:attributes][:invited_to_events]).to be_an(Array)
       expect(user[:attributes][:my_groups]).to be_an(Array)
       expect(user[:attributes][:my_groups][0]).to be_a(Hash)
@@ -123,7 +119,7 @@ RSpec.describe LynkUpService do
       expect(user_friends[:data]).to be_a(Hash)
       expect(user_friends[:data].keys).to eq([:friends])
       expect(user_friends[:data][:friends]).to be_an(Array)
-      expect(user_friends[:data][:friends].size).to eq(5)
+      expect(user_friends[:data][:friends].size).to eq(6)
       expect(user_friends[:data][:friends][0]).to be_a(Hash)
       expect(user_friends[:data][:friends][0].keys).to eq([:user_id, :user_name, :full_name, :phone_number])
       expect(user_friends[:data][:friends][0][:user_id]).to be_an(Integer)
@@ -202,18 +198,17 @@ RSpec.describe LynkUpService do
       expect(groups[:data][0][:attributes][:group_friends][0][:full_name]).to be_a(String)
       expect(groups[:data][0][:attributes][:group_friends][0][:phone_number]).to be_a(String)
       expect(groups[:data][0][:attributes][:group_events]).to be_an(Array)
-      expect(groups[:data][0][:attributes][:group_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(groups[:data][0][:attributes][:group_events][0].keys).to eq([:id, :group, :group_name, :title, :date_time])
       expect(groups[:data][0][:attributes][:group_events][0][:id]).to be_an(Integer)
       expect(groups[:data][0][:attributes][:group_events][0][:group]).to be_an(Integer)
       expect(groups[:data][0][:attributes][:group_events][0][:group_name]).to be_a(String)
       expect(groups[:data][0][:attributes][:group_events][0][:title]).to be_a(String)
-      expect(groups[:data][0][:attributes][:group_events][0][:date]).to be_a(String)
-      expect(groups[:data][0][:attributes][:group_events][0][:time]).to be_a(String)
+      expect(groups[:data][0][:attributes][:group_events][0][:date_time]).to be_a(String)
     end
   end
 
   describe "get_group", :vcr do 
-    let(:group) { LynkUpService.new.get_group(1) }
+    let(:group) { LynkUpService.new.get_group(2) }
 
     it "returns a group json object" do
       expect(group).to be_a(Hash)
@@ -235,20 +230,40 @@ RSpec.describe LynkUpService do
       expect(group[:data][:attributes][:group_friends][0][:phone_number]).to be_a(String)
       expect(group[:data][:attributes][:group_events]).to be_an(Array)
       expect(group[:data][:attributes][:group_events][0]).to be_a(Hash)
-      expect(group[:data][:attributes][:group_events][0].keys).to eq([:id, :group, :group_name, :title, :date, :time])
+      expect(group[:data][:attributes][:group_events][0].keys).to eq([:id, :group, :group_name, :title, :date_time])
       expect(group[:data][:attributes][:group_events][0][:id]).to be_an(Integer)
       expect(group[:data][:attributes][:group_events][0][:group]).to be_an(Integer)
       expect(group[:data][:attributes][:group_events][0][:group_name]).to be_a(String)
       expect(group[:data][:attributes][:group_events][0][:title]).to be_a(String)
-      expect(group[:data][:attributes][:group_events][0][:date]).to be_a(String)
-      expect(group[:data][:attributes][:group_events][0][:time]).to be_a(String)
+      expect(group[:data][:attributes][:group_events][0][:date_time]).to be_a(String)
+    end
+  end
+
+  describe "get_group_friends", :vcr do 
+    let(:friends) { LynkUpService.new.get_group_friends(2) }
+
+    it "returns a group json object" do
+      expect(friends).to be_a(Hash)
+      expect(friends.keys).to eq([:friends])
+      expect(friends[:friends]).to be_an(Array)
+      expect(friends[:friends][0]).to be_a(Hash)
+      expect(friends[:friends][0].keys).to eq([:id, :type, :attributes])
+      expect(friends[:friends][0][:id]).to be_an(Integer)
+      expect(friends[:friends][0][:type]).to eq("user")
+      expect(friends[:friends][0][:attributes]).to be_a(Hash)
+      expect(friends[:friends][0][:attributes][:user_name]).to be_a(String)
+      expect(friends[:friends][0][:attributes][:phone_number]).to be_a(String)
+      expect(friends[:friends][0][:attributes][:full_name]).to be_a(String)
+      expect(friends[:friends][0][:attributes][:my_events]).to be_an(Array)
+      expect(friends[:friends][0][:attributes][:invited_to_events]).to be_an(Array)
+      expect(friends[:friends][0][:attributes][:my_groups]).to be_an(Array)
+      expect(friends[:friends][0][:attributes][:included_in_groups]).to be_an(Array)
     end
   end
 
   describe "create_group", :vcr do
     let(:group) { LynkUpService.new.create_group({user: 1, name: "New Group", friends_list: [{friend_id: 7}, {friend_id: 8}]}) }
     let(:group2) { LynkUpService.new.create_group({user: 1, name: "Another New Group"}) }
-
 
     it "returns a new group json object" do
       expect(group).to be_a(Hash)
@@ -301,7 +316,7 @@ RSpec.describe LynkUpService do
   end
 
   describe "delete_group", :vcr do
-    let(:response) { LynkUpService.new.delete_group(1)}
+    let(:response) { LynkUpService.new.delete_group(20)}
 
     it "deletes a group" do
       expect(response.status).to eq(204)
@@ -318,28 +333,26 @@ RSpec.describe LynkUpService do
       expect(events[:data][0][:group]).to be_an(Integer)
       expect(events[:data][0][:group_name]).to be_a(String)
       expect(events[:data][0][:title]).to be_a(String)
-      expect(events[:data][0][:date]).to be_a(String)
-      expect(events[:data][0][:time]).to be_a(String)
+      expect(events[:data][0][:date_time]).to be_a(String)
       expect(events[:data][0][:address]).to be_a(String)
       expect(events[:data][0][:description]).to be_a(String)
     end
   end
 
   describe "get_event", :vcr do
-    let (:event) { LynkUpService.new.get_event(1) }
+    let (:event) { LynkUpService.new.get_event(4) }
 
     it "returns an event json object" do
       expect(event).to be_a(Hash)
       expect(event[:data]).to be_a(Hash)
-      expect(event[:data].keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date, :time, :address, :description, :invited])
+      expect(event[:data].keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date_time, :address, :description, :invited])
       expect(event[:data][:id]).to be_an(Integer)
       expect(event[:data][:group]).to be_an(Integer)
       expect(event[:data][:group_name]).to be_a(String)
       expect(event[:data][:host_id]).to be_an(Integer)
       expect(event[:data][:host_name]).to be_a(String)
       expect(event[:data][:title]).to be_a(String)
-      expect(event[:data][:date]).to be_a(String)
-      expect(event[:data][:time]).to be_a(String)
+      expect(event[:data][:date_time]).to be_a(String)
       expect(event[:data][:address]).to be_a(String)
       expect(event[:data][:description]).to be_a(String)
       expect(event[:data][:invited]).to be_an(Array)
@@ -353,19 +366,18 @@ RSpec.describe LynkUpService do
   end
 
   describe "update_event", :vcr do
-    let (:event) { LynkUpService.new.update_event(7, {title: "Root - A medium length game", date: "08-04-24", time: "9:00 PM", address: "321 another address St.", description: "BYOB, arrive on time"}) }
+    let (:event) { LynkUpService.new.update_event(4, {title: "Going to the Barbie Movie", date_time: "2023-07-21T20:00:00Z", address: "321 another address St.", description: "BYOB, arrive on time"}) }
 
     it "returns an event json object" do
       expect(event).to be_a(Hash)
-      expect(event.keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date, :time, :address, :description, :invited])
+      expect(event.keys).to eq([:id, :group, :group_name, :host_id, :host_name, :title, :date_time, :address, :description, :invited])
       expect(event[:id]).to be_an(Integer)
       expect(event[:group]).to be_an(Integer)
       expect(event[:group_name]).to be_a(String)
       expect(event[:host_id]).to be_an(Integer)
       expect(event[:host_name]).to be_a(String)
       expect(event[:title]).to be_a(String)
-      expect(event[:date]).to be_a(String)
-      expect(event[:time]).to be_a(String)
+      expect(event[:date_time]).to be_a(String)
       expect(event[:address]).to be_a(String)
       expect(event[:description]).to be_a(String)
       expect(event[:invited]).to be_an(Array)
@@ -379,7 +391,7 @@ RSpec.describe LynkUpService do
   end
 
   describe "delete_event", :vcr do
-    let (:response) { LynkUpService.new.delete_event(7) }
+    let (:response) { LynkUpService.new.delete_event(4) }
 
     it "deletes an event" do
       expect(response.status).to eq(204)
