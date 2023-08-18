@@ -8,18 +8,10 @@ class LynkUpFacade
     user = User.new(json[:data])
   end
 
-  def datetime_parser(event)
-    date_split = event.date.split("-")
-    time_split = event.time.split(":")
-    DateTime.new(date_split[0].to_i, date_split[1].to_i, date_split[2].to_i, time_split[0].to_i, time_split[1].to_i, time_split[2].to_i)
-  end
-  
   def sort_events(events)
-    sorted_events = events.sort_by do |event|
-      datetime_parser(event)
+    events.sort_by do |event|
+      event.date_time
     end
-  
-    sorted_events
   end
 
   def combine_events(my_events, invited_to_events)
@@ -29,17 +21,16 @@ class LynkUpFacade
 
     sort_events(all_events.flatten)
   end
-
   
   def upcoming_events(events)
     events.select do |event|
-      event if DateTime.now <= datetime_parser(event)
+      event if DateTime.now <= event.date_time
     end
   end
 
   def past_events(events)
     events.select do |event|
-      event if DateTime.now > datetime_parser(event)
+      event if DateTime.now > event.date_time
     end.reverse
   end
 
@@ -73,11 +64,6 @@ class LynkUpFacade
       Group.new(data)
     end
   end
-
-  # def change_group_info(id, params)
-  #   json = @service.update_group(id, params)
-  #   Group.new(json)
-  # end
 
   def find_all_user_friends(id)
     json = @service.get_friends_for_user(id)
