@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 17 Aug 2023 02:58:47 GMT
+      - Fri, 18 Aug 2023 02:49:29 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - OPTIONS, DELETE, GET
+      - OPTIONS, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '298'
+      - '598'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -41,7 +41,9 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":6,"type":"user","attributes":{"user_name":"william321","phone_number":"555-222-1111","full_name":"William
-        Lampke","my_events":[],"invited_to_events":[],"my_groups":[],"included_in_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
-        Bladers","member_count":3}]}}}'
-  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
+        Lampke","my_events":[],"invited_to_events":[{"id":4,"group":2,"group_name":"Friday
+        Night Hangs","title":"Going to the Movies","date_time":"2023-06-01T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladez","member_count":2},{"id":2,"name":"Friday Night Hangs","member_count":3}]}}}'
+  recorded_at: Fri, 18 Aug 2023 02:49:29 GMT
 recorded_with: VCR 6.1.0
