@@ -261,6 +261,34 @@ RSpec.describe LynkUpService do
     end
   end
 
+  describe "add_group_friend", :vcr do 
+    let(:friend_message) { LynkUpService.new.add_group_friend(1, {user: 8}) }
+    let(:friend_error) { LynkUpService.new.add_group_friend(1, {user: 7}) }
+
+
+    it "returns a group friend confirmation message json object" do
+      expect(friend_message).to be_a(Hash)
+      expect(friend_message.keys).to eq([:message])
+      expect(friend_message[:message]).to be_a(String)
+      expect(friend_message[:message]).to eq("Friend added to the group")
+    end
+
+    it "returns a group friend error message if friend already in the group" do
+      expect(friend_error).to be_a(Hash)
+      expect(friend_error.keys).to eq([:error])
+      expect(friend_error[:error]).to be_a(String)
+      expect(friend_error[:error]).to eq("Friend is already in the group")
+    end
+  end
+
+  describe "delete_group_friend", :vcr do 
+    let(:response) { LynkUpService.new.delete_group_friend(1, {user: 6}) }
+
+    it "deletes a friend for a user" do
+      expect(response.status).to eq(204)
+    end
+  end
+
   describe "create_group", :vcr do
     let(:group) { LynkUpService.new.create_group({user: 1, name: "New Group", friends_list: [{friend_id: 7}, {friend_id: 8}]}) }
     let(:group2) { LynkUpService.new.create_group({user: 1, name: "Another New Group"}) }

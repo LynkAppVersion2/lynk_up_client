@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8000/groups/1/friends/
+    body:
+      encoding: UTF-8
+      string: '{"user":7}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 18 Aug 2023 00:50:45 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - OPTIONS, POST, GET, DELETE
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '42'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"error":"Friend is already in the group"}'
+  recorded_at: Fri, 18 Aug 2023 00:50:45 GMT
+recorded_with: VCR 6.1.0
