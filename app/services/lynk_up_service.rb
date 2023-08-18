@@ -54,6 +54,21 @@ class LynkUpService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def add_group_friend(group_id, params)
+    response = connection.post("/groups/#{group_id}/friends/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+      con.body = params.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def delete_group_friend(group_id, params)
+    response = connection.delete("/groups/#{group_id}/friends/") do |con|
+      con.headers = { "Content-Type" => "application/json" }
+      con.body = params.to_json
+    end
+  end
+
   def create_group(params)
     response = connection.post("/groups/") do |con|
       con.headers = { "Content-Type" => "application/json" }
