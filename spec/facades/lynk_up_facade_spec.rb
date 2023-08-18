@@ -77,6 +77,23 @@ RSpec.describe LynkUpFacade do
     end
   end
 
+  describe "find_group_friends", :vcr do
+    let(:friends) { LynkUpFacade.new.find_group_friends(1) }
+
+    it "finds all friends in a group by group id" do
+      expect(friends).to be_an(Array)
+      expect(friends[0]).to be_a(Friend)
+      expect(friends[0].id).to be_an(Integer)
+      expect(friends[0].full_name).to be_a(String)
+      expect(friends[0].user_name).to be_a(String)
+      expect(friends[0].my_groups).to be_an(Array)
+      expect(friends[0].included_in_groups).to be_an(Array)
+      expect(friends[0].my_events).to be_an(Array)
+      expect(friends[0].invited_to_events).to be_an(Array)
+      expect(friends[0].phone_number).to be_a(String)
+    end
+  end
+
   describe "find_all_groups", :vcr do
     let(:groups) { LynkUpFacade.new.find_all_groups }
 
