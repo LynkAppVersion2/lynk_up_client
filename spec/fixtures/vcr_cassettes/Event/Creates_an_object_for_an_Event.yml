@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Aug 2023 03:15:03 GMT
+      - Fri, 18 Aug 2023 04:23:44 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -48,5 +48,5 @@ http_interactions:
         Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
         Deribeaux","phone_number":"555-222-9999"}]}}'
-  recorded_at: Fri, 18 Aug 2023 03:15:03 GMT
+  recorded_at: Fri, 18 Aug 2023 04:23:44 GMT
 recorded_with: VCR 6.1.0

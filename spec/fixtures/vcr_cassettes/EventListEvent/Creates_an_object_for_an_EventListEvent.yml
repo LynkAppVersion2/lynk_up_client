@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Aug 2023 03:10:06 GMT
+      - Fri, 18 Aug 2023 04:23:44 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -48,5 +48,5 @@ http_interactions:
         Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
         Night","member_count":5},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":5,"name":"New
         Group","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Fri, 18 Aug 2023 03:10:06 GMT
+  recorded_at: Fri, 18 Aug 2023 04:23:44 GMT
 recorded_with: VCR 6.1.0

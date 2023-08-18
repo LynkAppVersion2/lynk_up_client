@@ -9,9 +9,11 @@ RSpec.describe Event do
     expect(event.group_name).to be_a(String)
     expect(event.title).to be_a(String)
     expect(event.date_time).to be_a(String)
+    expect(event.formatted_datetime).to be_a(String)
     expect(event.address).to be_a(String)
     expect(event.description).to be_a(String)
     expect(event.invited).to be_an(Array)
     expect(event.invited.first).to be_a(FriendListFriend)
+
   end
 end
