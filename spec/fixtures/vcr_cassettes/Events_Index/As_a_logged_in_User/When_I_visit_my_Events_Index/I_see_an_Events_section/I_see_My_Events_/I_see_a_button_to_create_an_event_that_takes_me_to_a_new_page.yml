@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Aug 2023 03:43:17 GMT
+      - Fri, 18 Aug 2023 05:17:20 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - PATCH, DELETE, GET, OPTIONS
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '1098'
+      - '1111'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -40,17 +40,18 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"user123","phone_number":"555-555-5555","full_name":"Andra
+      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"andra123","phone_number":"999-999-9999","full_name":"Andra
         Helton","my_events":[{"id":1,"group":1,"group_name":"Game Night","title":"Space
-        Catan","date":"2024-11-02","time":"20:00:00"},{"id":2,"group":1,"group_name":"Game
-        Night","title":"Zombicide","date":"2023-05-30","time":"20:00:00"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date":"2023-06-03","time":"20:00:00"},{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date":"2023-11-02","time":"20:00:00"},{"id":5,"group":2,"group_name":"Friday
-        Night Hangs","title":"Renaissance Festival Afterparty","date":"2024-09-06","time":"18:00:00"},{"id":6,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks","date":"2024-10-04","time":"17:00:00"},{"id":7,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks, take 2","date":"2024-10-04","time":"16:00:00"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
-        Night","member_count":2},{"id":2,"name":"Friday Night Hangs","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Wed, 16 Aug 2023 03:43:17 GMT
+        Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"},{"id":6,"group":2,"group_name":"Friday
+        Night Hangs","title":"Stargazing","date_time":"2024-06-01T20:00:00Z"},{"id":7,"group":2,"group_name":"Friday
+        Night Hangs","title":"Pre Stargazing Dinner","date_time":"2024-06-01T17:00:00Z"},{"id":8,"group":2,"group_name":"Friday
+        Night Hangs","title":"Wing Night","date_time":"2024-05-01T18:00:00Z"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
+        Night","member_count":5},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":5,"name":"New
+        Group","member_count":2}],"included_in_groups":[]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
 - request:
     method: get
     uri: http://localhost:8000/users/3/
@@ -70,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Aug 2023 03:43:17 GMT
+      - Fri, 18 Aug 2023 05:17:20 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -78,11 +79,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - PATCH, DELETE, GET, OPTIONS
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '550'
+      - '541'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -93,11 +94,11 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":3,"type":"user","attributes":{"user_name":"joe123","phone_number":"555-888-1111","full_name":"Joe
         Fogiato","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
-        Night","title":"Space Catan","date":"2024-11-02","time":"20:00:00"},{"id":2,"group":1,"group_name":"Game
-        Night","title":"Zombicide","date":"2023-05-30","time":"20:00:00"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date":"2023-06-03","time":"20:00:00"}],"my_groups":[],"included_in_groups":[{"id":1,"name":"Game
-        Night","member_count":2}]}}}'
-  recorded_at: Wed, 16 Aug 2023 03:43:17 GMT
+        Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":1,"name":"Game
+        Night","member_count":5}]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
 - request:
     method: get
     uri: http://localhost:8000/users/2/
@@ -117,7 +118,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Aug 2023 03:43:17 GMT
+      - Fri, 18 Aug 2023 05:17:20 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -125,11 +126,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - PATCH, DELETE, GET, OPTIONS
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '302'
+      - '303'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -140,8 +141,60 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":2,"type":"user","attributes":{"user_name":"otheruser321","phone_number":"555-111-5555","full_name":"Antonio
         King Hunt","my_events":[],"invited_to_events":[],"my_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
-        Bladez","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Wed, 16 Aug 2023 03:43:17 GMT
+        Bladers","member_count":3}],"included_in_groups":[]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/users/6/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Aug 2023 05:17:20 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - OPTIONS, PATCH, GET, DELETE
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '1162'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":6,"type":"user","attributes":{"user_name":"william321","phone_number":"555-222-1111","full_name":"William
+        Lampke","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
+        Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"},{"id":6,"group":2,"group_name":"Friday
+        Night Hangs","title":"Stargazing","date_time":"2024-06-01T20:00:00Z"},{"id":7,"group":2,"group_name":"Friday
+        Night Hangs","title":"Pre Stargazing Dinner","date_time":"2024-06-01T17:00:00Z"},{"id":8,"group":2,"group_name":"Friday
+        Night Hangs","title":"Wing Night","date_time":"2024-05-01T18:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladers","member_count":3},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":1,"name":"Game
+        Night","member_count":5}]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
 - request:
     method: get
     uri: http://localhost:8000/users/1/
@@ -161,7 +214,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Aug 2023 03:43:17 GMT
+      - Fri, 18 Aug 2023 05:17:20 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -169,11 +222,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - PATCH, DELETE, GET, OPTIONS
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '1098'
+      - '1111'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -182,17 +235,18 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"user123","phone_number":"555-555-5555","full_name":"Andra
+      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"andra123","phone_number":"999-999-9999","full_name":"Andra
         Helton","my_events":[{"id":1,"group":1,"group_name":"Game Night","title":"Space
-        Catan","date":"2024-11-02","time":"20:00:00"},{"id":2,"group":1,"group_name":"Game
-        Night","title":"Zombicide","date":"2023-05-30","time":"20:00:00"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date":"2023-06-03","time":"20:00:00"},{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date":"2023-11-02","time":"20:00:00"},{"id":5,"group":2,"group_name":"Friday
-        Night Hangs","title":"Renaissance Festival Afterparty","date":"2024-09-06","time":"18:00:00"},{"id":6,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks","date":"2024-10-04","time":"17:00:00"},{"id":7,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks, take 2","date":"2024-10-04","time":"16:00:00"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
-        Night","member_count":2},{"id":2,"name":"Friday Night Hangs","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Wed, 16 Aug 2023 03:43:17 GMT
+        Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"},{"id":6,"group":2,"group_name":"Friday
+        Night Hangs","title":"Stargazing","date_time":"2024-06-01T20:00:00Z"},{"id":7,"group":2,"group_name":"Friday
+        Night Hangs","title":"Pre Stargazing Dinner","date_time":"2024-06-01T17:00:00Z"},{"id":8,"group":2,"group_name":"Friday
+        Night Hangs","title":"Wing Night","date_time":"2024-05-01T18:00:00Z"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
+        Night","member_count":5},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":5,"name":"New
+        Group","member_count":2}],"included_in_groups":[]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
 - request:
     method: get
     uri: http://localhost:8000/users/1/
@@ -212,7 +266,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Aug 2023 03:43:17 GMT
+      - Fri, 18 Aug 2023 05:17:20 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -220,11 +274,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - PATCH, DELETE, GET, OPTIONS
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '1098'
+      - '1111'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -233,17 +287,18 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"user123","phone_number":"555-555-5555","full_name":"Andra
+      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"andra123","phone_number":"999-999-9999","full_name":"Andra
         Helton","my_events":[{"id":1,"group":1,"group_name":"Game Night","title":"Space
-        Catan","date":"2024-11-02","time":"20:00:00"},{"id":2,"group":1,"group_name":"Game
-        Night","title":"Zombicide","date":"2023-05-30","time":"20:00:00"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date":"2023-06-03","time":"20:00:00"},{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date":"2023-11-02","time":"20:00:00"},{"id":5,"group":2,"group_name":"Friday
-        Night Hangs","title":"Renaissance Festival Afterparty","date":"2024-09-06","time":"18:00:00"},{"id":6,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks","date":"2024-10-04","time":"17:00:00"},{"id":7,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks, take 2","date":"2024-10-04","time":"16:00:00"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
-        Night","member_count":2},{"id":2,"name":"Friday Night Hangs","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Wed, 16 Aug 2023 03:43:17 GMT
+        Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"},{"id":6,"group":2,"group_name":"Friday
+        Night Hangs","title":"Stargazing","date_time":"2024-06-01T20:00:00Z"},{"id":7,"group":2,"group_name":"Friday
+        Night Hangs","title":"Pre Stargazing Dinner","date_time":"2024-06-01T17:00:00Z"},{"id":8,"group":2,"group_name":"Friday
+        Night Hangs","title":"Wing Night","date_time":"2024-05-01T18:00:00Z"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
+        Night","member_count":5},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":5,"name":"New
+        Group","member_count":2}],"included_in_groups":[]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
 - request:
     method: get
     uri: http://localhost:8000/users/1/
@@ -263,7 +318,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Aug 2023 03:43:18 GMT
+      - Fri, 18 Aug 2023 05:17:20 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -271,11 +326,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - PATCH, DELETE, GET, OPTIONS
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '1098'
+      - '1111'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -284,15 +339,16 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"user123","phone_number":"555-555-5555","full_name":"Andra
+      string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"andra123","phone_number":"999-999-9999","full_name":"Andra
         Helton","my_events":[{"id":1,"group":1,"group_name":"Game Night","title":"Space
-        Catan","date":"2024-11-02","time":"20:00:00"},{"id":2,"group":1,"group_name":"Game
-        Night","title":"Zombicide","date":"2023-05-30","time":"20:00:00"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date":"2023-06-03","time":"20:00:00"},{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date":"2023-11-02","time":"20:00:00"},{"id":5,"group":2,"group_name":"Friday
-        Night Hangs","title":"Renaissance Festival Afterparty","date":"2024-09-06","time":"18:00:00"},{"id":6,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks","date":"2024-10-04","time":"17:00:00"},{"id":7,"group":2,"group_name":"Friday
-        Night Hangs","title":"Tea and Talks, take 2","date":"2024-10-04","time":"16:00:00"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
-        Night","member_count":2},{"id":2,"name":"Friday Night Hangs","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Wed, 16 Aug 2023 03:43:18 GMT
+        Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"},{"id":6,"group":2,"group_name":"Friday
+        Night Hangs","title":"Stargazing","date_time":"2024-06-01T20:00:00Z"},{"id":7,"group":2,"group_name":"Friday
+        Night Hangs","title":"Pre Stargazing Dinner","date_time":"2024-06-01T17:00:00Z"},{"id":8,"group":2,"group_name":"Friday
+        Night Hangs","title":"Wing Night","date_time":"2024-05-01T18:00:00Z"}],"invited_to_events":[],"my_groups":[{"id":1,"name":"Game
+        Night","member_count":5},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":5,"name":"New
+        Group","member_count":2}],"included_in_groups":[]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:17:20 GMT
 recorded_with: VCR 6.1.0

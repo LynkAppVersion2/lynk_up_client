@@ -11,6 +11,10 @@ RSpec.describe "Events Index" do
 
     let!(:user2) { LynkUpFacade.new.find_user(2) }
 
+    let!(:user6) { LynkUpFacade.new.find_user(6) }
+    let!(:user6_invited_events_sorted) { LynkUpFacade.new.sort_events(user6.invited_to_events) }
+
+
     describe "When I visit my Events Index", :vcr do
       before do
         visit "/users/#{user.id}/events"
@@ -39,11 +43,10 @@ RSpec.describe "Events Index" do
             context "For each event" do
               it "I see the event info and name as a link to its show page" do
                 within("#event-#{@event.id}") do
-                  expect(page).to have_link("Going to the Movies")
-                  expect(page).to have_content("20:00:00")
-                  expect(page).to have_content("2023-11-02")
+                  expect(page).to have_link("Wing Night")
+                  expect(page).to have_content("Wed May 01, 2024 at 06:00 PM")
   
-                  click_link "Going to the Movies"
+                  click_link "Wing Night"
                   expect(current_path).to eq("/users/#{user.id}/events/#{@event.id}")
                 end
               end
@@ -65,11 +68,10 @@ RSpec.describe "Events Index" do
           context "For each event" do
             it "I see the event info and name as a link to its show page" do
               within("#event-#{@event.id}") do
-                expect(page).to have_link("Root")
-                expect(page).to have_content("20:00:00")
-                expect(page).to have_content("2023-06-03")
+                expect(page).to have_link("Renaissance Festival Afterparty")
+                expect(page).to have_content("Wed June 07, 2023 at 06:00 PM")
 
-                click_link "Root"
+                click_link "Renaissance Festival Afterparty"
                 expect(current_path).to eq("/users/#{user.id}/events/#{@event.id}")
               end
             end
@@ -83,22 +85,21 @@ RSpec.describe "Events Index" do
 
         describe "I see 'Invited to' events" do
           before do
-            invited_upcoming_events = LynkUpFacade.new.upcoming_events(user3_invited_events_sorted)
+            invited_upcoming_events = LynkUpFacade.new.upcoming_events(user6_invited_events_sorted)
             @event = invited_upcoming_events[0]
           end
 
           describe "Upcoming Event Invitations" do
             context "For each event" do
               it "I see the event info and name as a link to its show page" do
-                visit "/users/#{user3.id}/events/"
+                visit "/users/#{user6.id}/events/"
 
                 within("#event-#{@event.id}") do
-                  expect(page).to have_link("Space Catan")
-                  expect(page).to have_content("20:00:00")
-                  expect(page).to have_content("2024-11-02")
+                  expect(page).to have_link("Wing Night")
+                  expect(page).to have_content("Wed May 01, 2024 at 06:00 PM")
   
-                  click_link "Space Catan"
-                  expect(current_path).to eq("/users/#{user3.id}/events/#{@event.id}")
+                  click_link "Wing Night"
+                  expect(current_path).to eq("/users/#{user6.id}/events/#{@event.id}")
                 end
               end
   
@@ -121,8 +122,7 @@ RSpec.describe "Events Index" do
 
                 within("#event-#{@event.id}") do
                   expect(page).to have_link("Root")
-                  expect(page).to have_content("20:00:00")
-                  expect(page).to have_content("2023-06-03")
+                  expect(page).to have_content("Sat June 03, 2023 at 08:00 PM")
   
                   click_link "Root"
                   expect(current_path).to eq("/users/#{user3.id}/events/#{@event.id}")
