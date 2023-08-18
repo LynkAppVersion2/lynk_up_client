@@ -9,7 +9,7 @@ RSpec.describe EventListEvent do
     expect(eventlistevent.first.group).to be_an(Integer)
     expect(eventlistevent.first.group_name).to be_a(String)
     expect(eventlistevent.first.title).to be_a(String)
-    expect(eventlistevent.first.date).to be_a(String)
-    expect(eventlistevent.first.time).to be_a(String)
+    expect(eventlistevent.first.date_time).to be_a(String)
+    expect(eventlistevent.first.formatted_datetime).to be_a(String)
   end
 end

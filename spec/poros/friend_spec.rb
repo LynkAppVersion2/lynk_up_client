@@ -2,6 +2,7 @@ require "rails_helper"
 
 RSpec.describe Friend do
   let(:friend) { LynkUpFacade.new.find_friend_for_user(1, 2) }
+  let(:friend2) { LynkUpFacade.new.find_friend_for_user(1, 7) }
 
   it "Creates an object for a Friend", :vcr do
     expect(friend.id).to be_an(Integer)
@@ -15,6 +16,6 @@ RSpec.describe Friend do
     expect(friend.my_groups).to be_an(Array)
     expect(friend.my_groups.first).to be_a(GroupListGroup)
     expect(friend.included_in_groups).to be_an(Array)
-    expect(friend.included_in_groups.first).to be_a(GroupListGroup)
+    expect(friend2.included_in_groups.first).to be_a(GroupListGroup)
   end
 end

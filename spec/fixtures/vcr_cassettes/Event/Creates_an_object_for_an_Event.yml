@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8000/events/4/
+    uri: http://localhost:8000/events/1/
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Jul 2023 04:34:34 GMT
+      - Fri, 18 Aug 2023 04:23:44 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - DELETE, OPTIONS, GET, PATCH
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '441'
+      - '719'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -40,10 +40,13 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"data":{"id":4,"group":2,"group_name":"Friday Night Hangs","host_id":1,"host_name":"Andra
-        Helton","title":"Going to the Movies","date":"06-01-23","time":"8:00 PM","address":"321
-        Candy Ln.","description":"Going to see the Mario movie","invited":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+      string: '{"data":{"id":1,"group":1,"group_name":"Game Night","host_id":1,"host_name":"Andra
+        Helton","title":"Space Catan","date_time":"2023-05-20T20:00:00Z","address":"123
+        Sesame St.","description":"It''s a fun time, just come already","invited":[{"user_id":3,"user_name":"joe123","full_name":"Joe
+        Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
+        Ryan","phone_number":"555-999-0000"},{"user_id":6,"user_name":"william321","full_name":"William
+        Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
         Deribeaux","phone_number":"555-222-9999"}]}}'
-  recorded_at: Thu, 20 Jul 2023 04:34:34 GMT
+  recorded_at: Fri, 18 Aug 2023 04:23:44 GMT
 recorded_with: VCR 6.1.0

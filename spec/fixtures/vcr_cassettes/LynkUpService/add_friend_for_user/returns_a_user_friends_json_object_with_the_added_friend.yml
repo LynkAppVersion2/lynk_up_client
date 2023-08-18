@@ -21,7 +21,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Thu, 17 Aug 2023 02:58:47 GMT
+      - Fri, 18 Aug 2023 02:49:29 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -29,7 +29,7 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - POST, OPTIONS, GET
+      - OPTIONS, POST, GET
       X-Frame-Options:
       - DENY
       Content-Length:
@@ -50,5 +50,5 @@ http_interactions:
         Deribeaux","phone_number":"555-222-9999"},{"user_id":6,"user_name":"william321","full_name":"William
         Lampke","phone_number":"555-222-1111"},{"user_id":5,"user_name":"dawson123","full_name":"Dawson
         Timmons","phone_number":"555-000-3333"}]}}'
-  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
+  recorded_at: Fri, 18 Aug 2023 02:49:29 GMT
 recorded_with: VCR 6.1.0

@@ -21,7 +21,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 18 Aug 2023 00:50:45 GMT
+      - Fri, 18 Aug 2023 02:55:12 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -43,5 +43,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":"Friend is already in the group"}'
-  recorded_at: Fri, 18 Aug 2023 00:50:45 GMT
+  recorded_at: Fri, 18 Aug 2023 02:55:12 GMT
 recorded_with: VCR 6.1.0

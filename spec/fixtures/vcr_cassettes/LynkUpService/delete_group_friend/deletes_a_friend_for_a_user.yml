@@ -21,7 +21,7 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Fri, 18 Aug 2023 00:58:59 GMT
+      - Fri, 18 Aug 2023 02:49:29 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Vary:
@@ -41,5 +41,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 18 Aug 2023 00:58:59 GMT
+  recorded_at: Fri, 18 Aug 2023 02:49:29 GMT
 recorded_with: VCR 6.1.0

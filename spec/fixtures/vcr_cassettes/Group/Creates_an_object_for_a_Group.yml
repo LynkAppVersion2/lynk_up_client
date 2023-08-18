@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Jul 2023 03:56:52 GMT
+      - Fri, 18 Aug 2023 04:23:44 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - DELETE, OPTIONS, GET, PATCH
+      - OPTIONS, PATCH, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '594'
+      - '588'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -41,11 +41,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":2,"type":"group","attributes":{"group_host_id":1,"group_host_name":"Andra
-        Helton","group_name":"Friday Night Hangs","group_friends":[{"user_id":7,"user_name":"trevor123","full_name":"Trevor
+        Helton","group_name":"Friday Night Hangs","group_friends":[{"user_id":6,"user_name":"william321","full_name":"William
+        Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
-        Deribeaux","phone_number":"555-222-9999"}],"group_events":[{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date":"06-01-23","time":"8:00
-        PM"},{"id":8,"group":2,"group_name":"Friday Night Hangs","title":"Denver Night
-        Hang","date":"06-05-23","time":"8:00 PM"}]}}}'
-  recorded_at: Thu, 20 Jul 2023 03:56:52 GMT
+        Deribeaux","phone_number":"555-222-9999"}],"group_events":[{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}]}}}'
+  recorded_at: Fri, 18 Aug 2023 04:23:44 GMT
 recorded_with: VCR 6.1.0

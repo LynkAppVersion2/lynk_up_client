@@ -8,8 +8,7 @@
   <% @my_upcoming_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
-      <p><%= event.time %></p>
-      <p><%= event.date %></p>
+      <p><%= event.formatted_datetime %></p>
     </div>
     <br>
   <% end %>
@@ -23,8 +22,7 @@
   <% @my_past_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
-      <p><%= event.time %></p>
-      <p><%= event.date %></p>
+      <p><%= event.formatted_datetime %></p>
     </div>
     <br>
   <% end %>
@@ -41,8 +39,7 @@
   <% @invited_upcoming_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
-      <p><%= event.time %></p>
-      <p><%= event.date %></p>
+      <p><%= event.formatted_datetime %></p>
     </div>
   <% end %>
 <% else %>
@@ -55,8 +52,7 @@
   <% @invited_past_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
-      <p><%= event.time %></p>
-      <p><%= event.date %></p>
+      <p><%= event.formatted_datetime %></p>
     </div>
   <% end %>
 <% else %>

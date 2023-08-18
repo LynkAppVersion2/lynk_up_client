@@ -21,11 +21,10 @@ RSpec.describe "Users Dashboard" do
           it "I see the event info and name as a link to its show page" do
             
             within("#event-#{@event.id}") do
-              expect(page).to have_link("Going to the Movies")
-              expect(page).to have_content("20:00:00")
-              expect(page).to have_content("2023-11-02")
-              
-              click_link "Going to the Movies"
+              expect(page).to have_link("Wing Night")
+              expect(page).to have_content("Wed May 01, 2024 at 06:00 PM")
+
+              click_link "Wing Night"
               expect(current_path).to eq("/users/#{user.id}/events/#{@event.id}")
             end
           end
@@ -47,11 +46,10 @@ RSpec.describe "Users Dashboard" do
           it "I see the event info and name as a link to its show page" do
 
             within("#event-#{@event.id}") do
-              expect(page).to have_link("Root")
-              expect(page).to have_content("20:00:00")
-              expect(page).to have_content("2023-06-03")
+              expect(page).to have_link("Renaissance Festival Afterparty")
+              expect(page).to have_content("Wed June 07, 2023 at 06:00 PM")
 
-              click_link "Root"
+              click_link "Renaissance Festival Afterparty"
               expect(current_path).to eq("/users/#{user.id}/events/#{@event.id}")
             end
           end

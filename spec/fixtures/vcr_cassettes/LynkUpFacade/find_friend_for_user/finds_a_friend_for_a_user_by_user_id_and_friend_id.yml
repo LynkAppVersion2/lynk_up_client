@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 28 Jul 2023 01:56:44 GMT
+      - Fri, 18 Aug 2023 05:28:54 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - GET, OPTIONS, DELETE
+      - OPTIONS, GET, DELETE
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '796'
+      - '303'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -42,11 +42,53 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":2,"type":"user","attributes":{"user_name":"otheruser321","phone_number":"555-111-5555","full_name":"Antonio
         King Hunt","my_events":[],"invited_to_events":[],"my_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
-        Bladers","member_count":3}],"included_in_groups":[{"id":9,"name":"Plein Air
-        Painting","member_count":2},{"id":17,"name":"Plein Air Painting","member_count":2},{"id":19,"name":"Plein
-        Air Painting","member_count":2},{"id":28,"name":"Plein Air Painting","member_count":2},{"id":33,"name":"Plein
-        Air Painting","member_count":2},{"id":34,"name":"Plein Air Painting","member_count":1},{"id":35,"name":"Plein
-        Air Painting","member_count":1},{"id":37,"name":"Plein Air Painting","member_count":1},{"id":38,"name":"Plein
-        Air Painting","member_count":2}]}}}'
-  recorded_at: Fri, 28 Jul 2023 01:56:44 GMT
+        Bladers","member_count":3}],"included_in_groups":[]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:28:54 GMT
+- request:
+    method: get
+    uri: http://localhost:8000/users/1/friends/3/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Aug 2023 05:28:54 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.10.11
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept, origin
+      Allow:
+      - OPTIONS, GET, DELETE
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '541'
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":3,"type":"user","attributes":{"user_name":"joe123","phone_number":"555-888-1111","full_name":"Joe
+        Fogiato","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
+        Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":1,"name":"Game
+        Night","member_count":5}]}}}'
+  recorded_at: Fri, 18 Aug 2023 05:28:54 GMT
 recorded_with: VCR 6.1.0

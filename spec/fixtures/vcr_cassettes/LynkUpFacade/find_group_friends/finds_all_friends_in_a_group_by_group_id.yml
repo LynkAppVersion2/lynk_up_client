@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Aug 2023 01:26:20 GMT
+      - Fri, 18 Aug 2023 03:03:04 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -31,7 +31,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '2900'
+      - '3621'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -45,27 +45,33 @@ http_interactions:
         Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
         Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
         Night","title":"Root","date_time":"2023-06-03T20:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":1,"name":"Game
-        Night","member_count":4}]}},{"id":4,"type":"user","attributes":{"user_name":"harrison321","phone_number":"555-999-0000","full_name":"Harrison
+        Night","member_count":5}]}},{"id":4,"type":"user","attributes":{"user_name":"harrison321","phone_number":"555-999-0000","full_name":"Harrison
         Ryan","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
         Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
         Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
         Night","title":"Root","date_time":"2023-06-03T20:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":1,"name":"Game
-        Night","member_count":4},{"id":3,"name":"Brunch","member_count":3}]}},{"id":7,"type":"user","attributes":{"user_name":"trevor123","phone_number":"555-222-3333","full_name":"Trevor
+        Night","member_count":5},{"id":3,"name":"Brunch","member_count":3}]}},{"id":7,"type":"user","attributes":{"user_name":"trevor123","phone_number":"555-222-3333","full_name":"Trevor
         Fitzgerald","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
         Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
         Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date_time":"2023-06-01T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
         Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":2,"name":"Friday
-        Night Hangs","member_count":3},{"id":3,"name":"Brunch","member_count":3},{"id":1,"name":"Game
-        Night","member_count":4}]}},{"id":8,"type":"user","attributes":{"user_name":"gus123","phone_number":"555-222-9999","full_name":"Gus
+        Night Hangs","member_count":3},{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladers","member_count":3},{"id":1,"name":"Game Night","member_count":5},{"id":5,"name":"New
+        Group","member_count":2}]}},{"id":8,"type":"user","attributes":{"user_name":"gus123","phone_number":"555-222-9999","full_name":"Gus
         Deribeaux","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
         Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
         Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
-        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":4,"group":2,"group_name":"Friday
-        Night Hangs","title":"Going to the Movies","date_time":"2023-06-01T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
         Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":2,"name":"Friday
-        Night Hangs","member_count":3},{"id":4,"name":"Roller Bladez","member_count":2},{"id":1,"name":"Game
-        Night","member_count":4}]}}]}'
-  recorded_at: Fri, 18 Aug 2023 01:26:20 GMT
+        Night Hangs","member_count":3},{"id":4,"name":"Roller Bladers","member_count":3},{"id":1,"name":"Game
+        Night","member_count":5},{"id":5,"name":"New Group","member_count":2}]}},{"id":6,"type":"user","attributes":{"user_name":"william321","phone_number":"555-222-1111","full_name":"William
+        Lampke","my_events":[],"invited_to_events":[{"id":1,"group":1,"group_name":"Game
+        Night","title":"Space Catan","date_time":"2023-05-20T20:00:00Z"},{"id":2,"group":1,"group_name":"Game
+        Night","title":"Zombicide","date_time":"2023-05-30T20:00:00Z"},{"id":3,"group":1,"group_name":"Game
+        Night","title":"Root","date_time":"2023-06-03T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}],"my_groups":[],"included_in_groups":[{"id":3,"name":"Brunch","member_count":3},{"id":4,"name":"Roller
+        Bladers","member_count":3},{"id":2,"name":"Friday Night Hangs","member_count":3},{"id":1,"name":"Game
+        Night","member_count":5}]}}]}'
+  recorded_at: Fri, 18 Aug 2023 03:03:04 GMT
 recorded_with: VCR 6.1.0
