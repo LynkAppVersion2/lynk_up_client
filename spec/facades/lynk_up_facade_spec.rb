@@ -148,37 +148,37 @@ RSpec.describe LynkUpFacade do
   end
 
   describe "find_friend_for_user", :vcr do
-    let(:friend) { LynkUpFacade.new.find_friend_for_user(1, 2) }
+    let(:friend2) { LynkUpFacade.new.find_friend_for_user(1, 2) }
+    let(:friend3) { LynkUpFacade.new.find_friend_for_user(1, 3) }
 
     it "finds a friend for a user by user_id and friend_id" do
-      expect(friend).to be_a(Friend)
-      expect(friend.full_name).to be_a(String)
-      expect(friend.id).to be_an(Integer)
-      expect(friend.included_in_groups).to be_an(Array)
-      expect(friend.included_in_groups.first).to be_a(GroupListGroup)
-      expect(friend.invited_to_events).to be_an(Array)
-      expect(friend.my_events).to be_an(Array)
-      expect(friend.my_groups).to be_an(Array)
-      expect(friend.my_groups.first).to be_a(GroupListGroup)
-      expect(friend.phone_number).to be_a(String)
-      expect(friend.user_name).to be_a(String)
+      expect(friend2).to be_a(Friend)
+      expect(friend2.full_name).to be_a(String)
+      expect(friend2.id).to be_an(Integer)
+      expect(friend3.included_in_groups).to be_an(Array)
+      expect(friend3.included_in_groups.first).to be_a(GroupListGroup)
+      expect(friend2.invited_to_events).to be_an(Array)
+      expect(friend2.my_events).to be_an(Array)
+      expect(friend2.my_groups).to be_an(Array)
+      expect(friend2.my_groups.first).to be_a(GroupListGroup)
+      expect(friend2.phone_number).to be_a(String)
+      expect(friend2.user_name).to be_a(String)
     end
   end
 
   describe "find_event", :vcr do
-    let(:event) { LynkUpFacade.new.find_event(4) }
+    let(:event) { LynkUpFacade.new.find_event(1) }
 
-    it "finds a friend for a user by user_id and friend_id" do
+    it "finds an event by id" do
       expect(event).to be_an(Event)
       expect(event.address).to be_a(String)
-      expect(event.date).to be_a(String)
+      expect(event.date_time).to be_a(String)
       expect(event.description).to be_a(String)
       expect(event.group_id).to be_an(Integer)
       expect(event.group_name).to be_a(String)
       expect(event.id).to be_an(Integer)
       expect(event.invited).to be_an(Array)
       expect(event.invited.first).to be_a(FriendListFriend)
-      expect(event.time).to be_a(String)
       expect(event.title).to be_a(String)
     end
   end
@@ -191,33 +191,31 @@ RSpec.describe LynkUpFacade do
       expect(events).to be_an(Array)
       expect(event).to be_an(Event)
       expect(event.address).to be_a(String)
-      expect(event.date).to be_a(String)
+      expect(event.date_time).to be_a(String)
       expect(event.description).to be_a(String)
       expect(event.group_id).to be_an(Integer)
       expect(event.group_name).to be_a(String)
       expect(event.id).to be_an(Integer)
       expect(event.invited).to be_an(Array)
       expect(event.invited.first).to be_a(FriendListFriend)
-      expect(event.time).to be_a(String)
       expect(event.title).to be_a(String)
     end
   end
 
   describe "change_event_info", :vcr do
-    new_params = {title: "Root - A medium length game", date: "08-04-24", time: "9:00 PM", address: "321 another address St.", description: "BYOB, arrive on time"}
-    let(:event) { LynkUpFacade.new.change_event_info(4, new_params) }
+    new_params = {title: "Reunion - First Annual", date_time: "2024-07-01T16:00:00Z", address: "321 another address St.", description: "BYOB, arrive on time"}
+    let(:event) { LynkUpFacade.new.change_event_info(9, new_params) }
 
     it "updates event info based on params" do
       expect(event).to be_an(Event)
       expect(event.address).to be_a(String)
-      expect(event.date).to be_a(String)
+      expect(event.date_time).to be_a(String)
       expect(event.description).to be_a(String)
       expect(event.group_id).to be_an(Integer)
       expect(event.group_name).to be_a(String)
       expect(event.id).to be_an(Integer)
       expect(event.invited).to be_an(Array)
       expect(event.invited.first).to be_a(FriendListFriend)
-      expect(event.time).to be_a(String)
       expect(event.title).to be_a(String)
     end
   end

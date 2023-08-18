@@ -1,28 +1,25 @@
 ---
 http_interactions:
 - request:
-    method: patch
-    uri: http://localhost:8000/events/9/
+    method: get
+    uri: http://localhost:8000/events/1/
     body:
-      encoding: UTF-8
-      string: '{"title":"Reunion - First Annual","date_time":"2024-07-01T16:00:00Z","address":"321
-        another address St.","description":"BYOB, arrive on time"}'
+      encoding: US-ASCII
+      string: ''
     headers:
-      Content-Type:
-      - application/json
+      User-Agent:
+      - Faraday v2.7.6
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 18 Aug 2023 05:35:03 GMT
+      - Fri, 18 Aug 2023 05:30:32 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -34,7 +31,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '535'
+      - '719'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -43,11 +40,13 @@ http_interactions:
       - same-origin
     body:
       encoding: UTF-8
-      string: '{"id":9,"group":2,"group_name":"Friday Night Hangs","host_id":1,"host_name":"Andra
-        Helton","title":"Reunion - First Annual","date_time":"2024-07-01T16:00:00Z","address":"321
-        another address St.","description":"BYOB, arrive on time","invited":[{"user_id":6,"user_name":"william321","full_name":"William
+      string: '{"data":{"id":1,"group":1,"group_name":"Game Night","host_id":1,"host_name":"Andra
+        Helton","title":"Space Catan","date_time":"2023-05-20T20:00:00Z","address":"123
+        Sesame St.","description":"It''s a fun time, just come already","invited":[{"user_id":3,"user_name":"joe123","full_name":"Joe
+        Fogiato","phone_number":"555-888-1111"},{"user_id":4,"user_name":"harrison321","full_name":"Harrison
+        Ryan","phone_number":"555-999-0000"},{"user_id":6,"user_name":"william321","full_name":"William
         Lampke","phone_number":"555-222-1111"},{"user_id":7,"user_name":"trevor123","full_name":"Trevor
         Fitzgerald","phone_number":"555-222-3333"},{"user_id":8,"user_name":"gus123","full_name":"Gus
-        Deribeaux","phone_number":"555-222-9999"}]}'
-  recorded_at: Fri, 18 Aug 2023 05:35:03 GMT
+        Deribeaux","phone_number":"555-222-9999"}]}}'
+  recorded_at: Fri, 18 Aug 2023 05:30:32 GMT
 recorded_with: VCR 6.1.0
