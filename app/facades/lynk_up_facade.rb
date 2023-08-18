@@ -60,6 +60,13 @@ class LynkUpFacade
     Group.new(json[:data])
   end
 
+  def find_group_friends(group_id)
+    json = @service.get_group_friends(group_id)
+    json[:friends].map do |data|
+      Friend.new(data)
+    end
+  end
+
   def find_all_groups
     json = @service.get_all_groups
     json[:data].map do |data|
