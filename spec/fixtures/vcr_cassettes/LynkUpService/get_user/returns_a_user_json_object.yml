@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Aug 2023 18:35:49 GMT
+      - Thu, 17 Aug 2023 02:58:47 GMT
       Server:
       - WSGIServer/0.2 CPython/3.10.11
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Vary:
       - Accept, origin
       Allow:
-      - OPTIONS, PATCH, DELETE, GET
+      - OPTIONS, DELETE, PATCH, GET
       X-Frame-Options:
       - DENY
       Content-Length:
-      - '2136'
+      - '1147'
       X-Content-Type-Options:
       - nosniff
       Referrer-Policy:
@@ -41,25 +41,15 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":1,"type":"user","attributes":{"user_name":"andra123","phone_number":"999-999-9999","full_name":"Andra
-        Helton","my_events":[{"id":4,"group":2,"group_name":"Friday Night Hangs","title":"Root
-        - A medium length game","date":"08-04-24","time":"9:00 PM"},{"id":8,"group":2,"group_name":"Friday
-        Night Hangs","title":"Denver Night Hang","date":"06-05-23","time":"8:00 PM"}],"invited_to_events":[],"my_groups":[{"id":2,"name":"Friday
-        Night Hangs","member_count":2},{"id":6,"name":"Plein Air Painting","member_count":0},{"id":7,"name":"New
-        Group","member_count":0},{"id":8,"name":"New Group","member_count":0},{"id":9,"name":"Plein
-        Air Painting","member_count":2},{"id":10,"name":"New Group","member_count":0},{"id":11,"name":"New
-        Group","member_count":0},{"id":12,"name":"New Group","member_count":0},{"id":13,"name":"New
-        Group","member_count":0},{"id":14,"name":"New Group","member_count":0},{"id":15,"name":"New
-        Group","member_count":0},{"id":16,"name":"New Group","member_count":0},{"id":17,"name":"Plein
-        Air Painting","member_count":2},{"id":18,"name":"New Group","member_count":0},{"id":19,"name":"Plein
-        Air Painting","member_count":2},{"id":20,"name":"New Group","member_count":0},{"id":21,"name":"New
-        Group","member_count":0},{"id":22,"name":"New Group","member_count":0},{"id":23,"name":"New
-        Group","member_count":0},{"id":24,"name":"New Group","member_count":0},{"id":25,"name":"New
-        Group","member_count":0},{"id":26,"name":"New Group","member_count":2},{"id":27,"name":"Plein
-        Air Painting","member_count":0},{"id":28,"name":"Plein Air Painting","member_count":2},{"id":29,"name":"New
-        Group","member_count":2},{"id":30,"name":"New Group","member_count":2},{"id":31,"name":"Another
-        New Group","member_count":0},{"id":32,"name":"Plein Air Painting","member_count":0},{"id":33,"name":"Plein
-        Air Painting","member_count":2},{"id":34,"name":"Plein Air Painting","member_count":1},{"id":35,"name":"Plein
-        Air Painting","member_count":1},{"id":36,"name":"Plein Air Painting","member_count":0},{"id":37,"name":"Plein
-        Air Painting","member_count":1},{"id":38,"name":"Plein Air Painting","member_count":2}],"included_in_groups":[]}}}'
-  recorded_at: Tue, 15 Aug 2023 18:35:49 GMT
+        Helton","my_events":[{"id":4,"group":2,"group_name":"Friday Night Hangs","title":"Going
+        to the Movies","date_time":"2023-06-01T20:00:00Z"},{"id":5,"group":2,"group_name":"Friday
+        Night Hangs","title":"Renaissance Festival Afterparty","date_time":"2023-06-07T18:00:00Z"}],"invited_to_events":[],"my_groups":[{"id":2,"name":"Friday
+        Night Hangs","member_count":3},{"id":5,"name":"New Group","member_count":0},{"id":6,"name":"Another
+        New Group","member_count":0},{"id":12,"name":"New Group","member_count":2},{"id":13,"name":"Another
+        New Group","member_count":0},{"id":14,"name":"New Group","member_count":2},{"id":15,"name":"Another
+        New Group","member_count":0},{"id":16,"name":"New Group","member_count":2},{"id":17,"name":"Another
+        New Group","member_count":0},{"id":18,"name":"New Group","member_count":2},{"id":19,"name":"Another
+        New Group","member_count":0},{"id":20,"name":"New Group","member_count":2},{"id":22,"name":"New
+        Group","member_count":2},{"id":23,"name":"Another New Group","member_count":0}],"included_in_groups":[]}}}'
+  recorded_at: Thu, 17 Aug 2023 02:58:47 GMT
 recorded_with: VCR 6.1.0
