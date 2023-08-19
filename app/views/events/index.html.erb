@@ -2,12 +2,14 @@
 
 <h3>My Events</h3>
 <p><%= button_to "Create Event", "/users/#{@user.id}/events/new", method: :get %></p>
+<br>
 
 <h4>My Upcoming Events</h4>
 <% if @my_upcoming_events.present? %>
   <% @my_upcoming_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p>Group: <%= event.group_name %></p>
       <p><%= event.formatted_datetime %></p>
     </div>
     <br>
@@ -22,6 +24,7 @@
   <% @my_past_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p>Group: <%= event.group_name %></p>
       <p><%= event.formatted_datetime %></p>
     </div>
     <br>
@@ -39,6 +42,7 @@
   <% @invited_upcoming_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p>Group: <%= event.group_name %></p>
       <p><%= event.formatted_datetime %></p>
     </div>
   <% end %>
@@ -52,6 +56,7 @@
   <% @invited_past_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p>Group: <%= event.group_name %></p>
       <p><%= event.formatted_datetime %></p>
     </div>
   <% end %>

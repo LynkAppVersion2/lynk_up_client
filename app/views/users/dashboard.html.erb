@@ -4,11 +4,12 @@
 <p><%= button_to "Create Event", "/users/#{@user.id}/events/new", method: :get %></p>
 <br>
 
-<h4>Upcoming Events<h4>
+<h4>Upcoming Events</h4>
 <% if @upcoming_events.present? %>
   <% @upcoming_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p>Group: <%= event.group_name %></p>
       <p><%= event.formatted_datetime %></p>
     </div>
     <br>
@@ -24,6 +25,7 @@
   <% @past_events.each do |event|%>
     <div id="event-<%= event.id%>">
       <h4><%= link_to "#{ event.title}", "/users/#{@user.id}/events/#{event.id}" %></h4>
+      <p>Group: <%= event.group_name %></p>
       <p><%= event.formatted_datetime %></p>
     </div>
     <br>
