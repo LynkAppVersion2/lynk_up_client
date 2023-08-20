@@ -11,16 +11,10 @@
   </head>
 
   <body>
-    <div class="nav-container"></div>
-      <h1 class="navbar-text"><%= link_to "#{current_user.full_name}", "/users/#{current_user.id}/dashboard" %></h1>
-      <nav class="menu">
-        <ul class="menu-options">
-          <li><%= link_to 'Events', "/users/#{current_user.id}/events" %>
-          <li><%= link_to 'Groups', "/users/#{current_user.id}/groups" %>
-          <li><%= link_to 'Friends', "/users/#{current_user.id}/friends" %>
-        </ul>
-      </nav>
+    <%= render "shared/navbar" %>
+  
+    <div class="container">
+      <%= yield %>
     </div>
-    <%= yield %>
   </body>
 </html>

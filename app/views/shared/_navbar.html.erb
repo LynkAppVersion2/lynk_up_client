@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand active" href="/users/<%= current_user.id %>/dashboard"><%= current_user.full_name %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Events
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/users/<%= current_user.id %>/dashboard">All</a>
+          <a class="dropdown-item" href="/users/<%= current_user.id %>/events/hosting">Hosting</a>
+          <a class="dropdown-item" href="/users/<%= current_user.id %>/events/invitations">Invitations</a>
+          <a class="dropdown-item" href="/users/<%= current_user.id %>/events/new">Create</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/<%= current_user.id %>/groups">Groups</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/<%= current_user.id %>/friends">Friends</a>
+      </li>
+    </ul>
+  </div>
+</nav>
