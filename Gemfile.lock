@@ -282,7 +282,6 @@ DEPENDENCIES
   simplecov
   sprockets-rails
   stimulus-rails
-  tailwindcss-rails
   turbo-rails
   tzinfo-data
   vcr
@@ -293,4 +292,4 @@ RUBY VERSION
    ruby 3.1.1p18
 
 BUNDLED WITH
-   2.4.19
+   2.4.10
