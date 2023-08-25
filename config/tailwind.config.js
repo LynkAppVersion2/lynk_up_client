@@ -8,6 +8,10 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}'
   ],
+  purge: [                                                                                                                                                                               
+    "./app/**/*.html.erb",                                                                                                                                                               
+    "./app/javascript/**/*.vue",                                                                                                                                                         
+  ],  
   theme: {
     extend: {
       fontFamily: {
