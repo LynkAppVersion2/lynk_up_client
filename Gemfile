@@ -63,6 +63,7 @@ group :development, :test do
   gem "vcr"
   gem "webmock"
   gem "factory_bot_rails"
+  gem "tailwindcss-rails"
 end
 
 group :development do
@@ -77,4 +78,3 @@ group :development do
 end
 
 
-gem "tailwindcss-rails"
