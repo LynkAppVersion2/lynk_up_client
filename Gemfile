@@ -46,6 +46,8 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+gem 'sassc', github: 'sass/sassc-ruby', ref: 'refs/pull/233/head'
+gem 'sassc-embedded'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -63,6 +65,7 @@ group :development, :test do
   gem "vcr"
   gem "webmock"
   gem "factory_bot_rails"
+  gem "tailwindcss-rails"
 end
 
 group :development do
@@ -75,4 +78,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+
+
 
