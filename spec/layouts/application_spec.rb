@@ -12,8 +12,8 @@ RSpec.describe "Application Pages", type: :feature do
 
       it "I see my full name" do
         visit "/users/#{user.id}/events"
-        expect(page).to have_link("LynkUp")
-        click_link "LynkUp"
+        expect(page).to have_link("Andra Helton")
+        click_link "Andra Helton"
         expect(current_path).to eq("/users/#{user.id}/dashboard")
       end
 
