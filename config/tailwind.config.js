@@ -18,8 +18,12 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'background': '#d1cbc9',
-        'navigation': '#1f2724',
+        // 'background': '#E7DCDC',
+        'background': '#ddffa373',
+        // 'navigation': '#282030e3',
+        // 'navigation': '#202323',
+        'navigation': '#232626',
+
 
         // 'white': '#ffffff',
         // 'purple': '#3f3cbb',
